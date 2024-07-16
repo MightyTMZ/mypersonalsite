@@ -23,8 +23,7 @@ class VentureAdmin(admin.ModelAdmin):
     )
 
     list_editable = (
-        'title',
-        "description"
+        "description",
         'website'
     )
 
