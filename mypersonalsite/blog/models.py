@@ -81,3 +81,13 @@ class ImageBlock(models.Model):
         return f"{self.order} - {self.type} - {self.article}"
 
 
+class Publisher(models.Model):
+    title = models.CharField(max_length=255)
+    icon = models.ImageField(upload_to="media/publisher/icons")
+
+
+class Link(models.Model):
+    url = models.CharField(max_length=2083)
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE, related_name="links")
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name="external_links")
+
