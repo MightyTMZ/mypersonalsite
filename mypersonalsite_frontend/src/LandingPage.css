@@ -1,0 +1,53 @@
+.landing-page {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navigation a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.top-section {
+  display: flex; /* Set display to flex to align items side-by-side */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-bottom: 20px;
+}
+
+.greeting {
+  margin-right: 20px; /* Add space between the text and the image */
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 200px;
+  background-color: #ccc; /* Placeholder for an image */
+}
+
+.introduction p {
+  text-align: center; /* Centering text in the introduction */
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}

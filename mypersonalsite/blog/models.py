@@ -85,6 +85,9 @@ class Publisher(models.Model):
     title = models.CharField(max_length=255)
     icon = models.ImageField(upload_to="media/publisher/icons")
 
+    def __str__(self):
+        return self.title
+
 
 class Link(models.Model):
     url = models.CharField(max_length=2083)
