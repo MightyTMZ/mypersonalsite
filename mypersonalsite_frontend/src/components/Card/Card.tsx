@@ -8,6 +8,8 @@ interface CardProps {
   link: string;
 }
 
+// used to render articles
+
 const Card: React.FC<CardProps> = ({ title, description, image, link }) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
