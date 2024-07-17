@@ -1,10 +1,10 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap CSS is imported
+import NavBar from "./components/NavBar/NavBar";
 
 const LandingPage = () => {
   return (
     <div className="container landing-page">
-      <header className="d-flex justify-content-between align-items-center py-3">
+      {/*<header className="d-flex justify-content-between align-items-center py-3">
         <h1 className="h3">Tom Zhang</h1>
         <nav>
           <a href="#home" className="btn btn-link">
@@ -20,7 +20,8 @@ const LandingPage = () => {
             Other
           </a>
         </nav>
-      </header>
+      </header>*/}
+      <NavBar />
       <main>
         <div className="row align-items-center my-5">
           <div className="col-lg-7 text-center text-lg-left">
