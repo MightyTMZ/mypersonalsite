@@ -9,16 +9,16 @@ class TextBlockSerializer(serializers.ModelSerializer):
         model = TextBlock
         fields = [
             'content', 
-            'type'
+            'type',
             'order', 
         ]
 
 
 class HeadingBlockSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TextBlock
+        model = HeadingBlock
         fields = [
-            'content', 
+            'heading', 
             'type',
             'order', 
         ]
@@ -26,7 +26,7 @@ class HeadingBlockSerializer(serializers.ModelSerializer):
 
 class ImageBlockSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TextBlock
+        model = ImageBlock
         fields = [
             'image', 
             'type',
@@ -62,7 +62,7 @@ class ArticleSerializer(serializers.ModelSerializer):
     text_blocks = TextBlockSerializer(many=True, read_only=True)
     heading_blocks = HeadingBlockSerializer(many=True, read_only=True)
     image_blocks = ImageBlockSerializer(many=True, read_only=True)
-    link = LinkSerializer(many=True, read_only=True)
+    links = LinkSerializer(many=True, read_only=True)
 
     class Meta:
         model = Article

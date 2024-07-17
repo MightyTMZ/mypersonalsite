@@ -22,7 +22,7 @@ class Article(models.Model):
     slug = models.SlugField(default="-", editable=False, max_length=250)
     author = models.ForeignKey(Author, on_delete=models.PROTECT, related_name="articles")
     created_at = models.DateTimeField()
-    updated_at = models.DateTimeField()
+    updated_at = models.DateTimeField(null=True, blank=True)
     is_published = models.BooleanField(default=False)
     featured_image = models.ImageField(upload_to='articles/%Y/%m/%d/', blank=True, null=True)
 
