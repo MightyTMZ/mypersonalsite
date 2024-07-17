@@ -21,8 +21,8 @@ class Article(models.Model):
     # Since slug comes from title, the slug must also be unique
     slug = models.SlugField(default="-", editable=False, max_length=250)
     author = models.ForeignKey(Author, on_delete=models.PROTECT, related_name="articles")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField()
     is_published = models.BooleanField(default=False)
     featured_image = models.ImageField(upload_to='articles/%Y/%m/%d/', blank=True, null=True)
 
