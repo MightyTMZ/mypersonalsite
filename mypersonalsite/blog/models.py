@@ -19,6 +19,7 @@ class Author(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=255, unique=True)
     # Since slug comes from title, the slug must also be unique
+    subtitle = models.CharField(max_length=355, default="") # derived idea from Substack
     slug = models.SlugField(default="-", editable=False, max_length=250)
     author = models.ForeignKey(Author, on_delete=models.PROTECT, related_name="articles")
     created_at = models.DateTimeField()
