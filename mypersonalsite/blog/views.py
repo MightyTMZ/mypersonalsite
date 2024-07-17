@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from rest_framework.views import APIView
+from rest_framework import views
+from rest_framework.response import Response
 from .models import *
 from .serializers import *
 
 
 
-class ArticleList(APIView):
+class ArticleList(views.APIView):
     def get(self, request, format=None):
         queryset = Article.objects.all() # you can add pagination later
-        serializer_class = 
+        serializer = ArticleSerializer(queryset, many=True)
+        return Response(serializer.data)

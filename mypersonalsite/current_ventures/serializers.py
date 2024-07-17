@@ -6,6 +6,7 @@ class TestimonialSerializer(serializers.ModelSerializer):
     class Meta:
         model = Testimonial
         fields = [
+            'id',
             'name', 
             'role', 
             'link', # will be used to attach their LinkedIn
@@ -17,6 +18,7 @@ class AchievementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Achievement
         fields = [
+            'id',
             'title', 
             'description', 
             'date'
@@ -32,6 +34,7 @@ class VentureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Venture
         fields = [
+            'id',
             'title', 
             'description', 
             'start_date', 
