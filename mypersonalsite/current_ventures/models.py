@@ -16,6 +16,7 @@ class Testimonial(models.Model):
     venture = models.ForeignKey(Venture, on_delete=models.CASCADE, related_name='testimonials')
     name = models.CharField(max_length=255)
     role = models.CharField(max_length=255)
+    link = models.CharField(max_length=2083, default="link not filled in") # attach a link that will be about that testimonial
     testimonial = models.TextField()
 
     def __str__(self):
