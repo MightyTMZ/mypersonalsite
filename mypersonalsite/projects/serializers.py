@@ -25,7 +25,7 @@ class AchievementSerializer(serializers.ModelSerializer):
 
 
 
-class ProjectSerializer(serializers.Serializer):
+class ProjectSerializer(serializers.ModelSerializer):
     images = PhotoSerializer(many=True, read_only=True)
     links = LinkSerializer(many=True, read_only=True)
     achievements = AchievementSerializer(many=True, read_only=True, source='achievement_set')
