@@ -1,46 +1,84 @@
-.certificates-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
-
+/* Basic styles for the certificate card */
 .certificate-card {
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  text-align: center;
-  width: 250px; /* Fixed width for desktop */
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4; /* Light grey background */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+.certificate-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the logo image */
+.certificate-card img.logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Heading and organization name */
 .certificate-card h3 {
-  font-size: 1.2em;
+  flex-grow: 1;
+  margin: 0;
   color: #333;
+  font-size: 18px;
 }
 
-.certificate-card .organization {
-  font-size: 0.9em;
-  color: #666;
-}
-
-.certificate-card .view-button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #0056b3;
+/* Styles for the view button */
+.certificate-card a.view-button {
+  background-color: #007bff;
   color: white;
+  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.9em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-@media (max-width: 600px) {
-  .certificates-container {
+.certificate-card a.view-button:hover {
+  background-color: #0056b3;
+}
+
+.view-button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #007bff;
+  border: 2px solid white;
+  border-radius: 15px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border 0.2s ease-in-out; /* Smooth transition for color, background, and border */
+}
+
+.view-button:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certificate-card {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .certificate-card img.logo {
+    margin-bottom: 10px;
   }
 
   .certificate-card {
-    width: 90%; /* Full width on mobile */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .view-button {
+    margin-top: 15px;
   }
 }

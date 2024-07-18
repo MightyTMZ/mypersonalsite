@@ -1,16 +1,38 @@
-import LandingPage from "./LandingPage";
+import Certificates from "./screens/Certificates/Certificates";
+import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
+import logo from './assets/meta.webp'; // Correct import path for the logo
+import logo2 from './assets/ibm.jpg'; // Correct import path for the logo
+
 function App() {
-  /*let description =
-    "Behind the scenes of a 16-year-old entrepreneur diving into the industry of technology, economics, and sustainable development.";
-  let title = "Tom's Journey";
-  let address =
-    "https://images.squarespace-cdn.com/content/v1/59830e2459cc688aecff0bf0/1551109502313-E8YXIAN70V4VBOKOJ0A8/hudson-newsletter.png?format=1500w";
-  let link = "https://zhangtommy.substack.com/";*/
+  let certs = [
+    {
+        title: "Meta Back-End Developer Professional Certificate",
+        issuer: {
+            name: "Meta",
+            url: "https://www.linkedin.com/company/meta/",
+            logo: logo // Assign the imported logo here directly
+        },
+        url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR"
+    }, 
+    {
+      title: "IBM AI Engineering Professional Certificate",
+      issuer: {
+          name: "IBM",
+          url: "https://www.linkedin.com/company/ibm/",
+          logo: logo2 // Assign the imported logo here directly
+      },
+      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR"
+  }
+  ];
 
   return (
-    <>
-      <LandingPage />
-    </>
+      <div className="container">
+        <NavBar />
+        <h1>Certificates</h1>
+        <Certificates certificates={certs} />
+        <Footer />
+      </div>
   );
 }
 
