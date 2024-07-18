@@ -1,5 +1,4 @@
-import ArticlesPage from "./screens/Articles/ArticlesPage";
-
+import LandingPage from "./LandingPage";
 function App() {
   /*let description =
     "Behind the scenes of a 16-year-old entrepreneur diving into the industry of technology, economics, and sustainable development.";
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <>
-      <ArticlesPage />
+      <LandingPage />
     </>
   );
 }
