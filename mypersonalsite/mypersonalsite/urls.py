@@ -22,5 +22,6 @@ urlpatterns = [
     path('projects/', include('projects.urls')),
     path('blog/', include('blog.urls')), # make sure you add a page on the frontend that consolidates all your articles
     path('current-ventures/', include('current_ventures.urls')), 
-    path('skills/', include('skills.urls'))
+    path('skills/', include('skills.urls')), 
+    path('achievements/', include('achievements.urls'))
 ]
