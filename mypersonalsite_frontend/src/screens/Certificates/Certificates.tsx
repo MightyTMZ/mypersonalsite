@@ -48,12 +48,15 @@ interface CertificatesProps {
 
 const Certificates: React.FC<CertificatesProps> = ({ certificates }) => {
   return (
-    <div className="certificates-container" style={{ marginTop: "20px"}}>
-        <hr/>
-      {certificates.map((cert, index) => (
-        <CertificateCard key={index} certificate={cert} />
-      ))}
-    </div>
+    <>
+      <h1>Certificates</h1>
+      <div className="certificates-container" style={{ marginTop: "20px" }}>
+        <hr />
+        {certificates.map((cert, index) => (
+          <CertificateCard key={index} certificate={cert} />
+        ))}
+      </div>
+    </>
   );
 };
 

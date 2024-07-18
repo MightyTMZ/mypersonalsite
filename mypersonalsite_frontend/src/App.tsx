@@ -1,6 +1,7 @@
 import Certificates from "./screens/Certificates/Certificates";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import ConnectWithMe from "./screens/Connect With Me/ConnectWithMe";
 import logo from './assets/meta.webp'; // Correct import path for the logo
 import logo2 from './assets/ibm.jpg'; // Correct import path for the logo
 
@@ -29,8 +30,7 @@ function App() {
   return (
       <div className="container">
         <NavBar />
-        <h1>Certificates</h1>
-        <Certificates certificates={certs} />
+        <ConnectWithMe/>
         <Footer />
       </div>
   );

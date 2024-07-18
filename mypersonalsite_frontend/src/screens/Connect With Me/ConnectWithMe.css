@@ -1,0 +1,71 @@
+/* Base container styling */
+.connect-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f0f4f8; /* Light blue background */
+  font-family: "Arial", sans-serif; /* Consistent font for the entire component */
+  gap: 30px; /* Adds space between the profile and links section */
+}
+
+.profile-section {
+  flex: 1; /* Allows the profile section to take necessary space */
+  display: flex;
+  justify-content: center; /* Centers the profile image horizontally */
+}
+
+.profile-pic {
+  width: 200px; /* Slightly larger profile picture */
+  height: 200px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+.links-section {
+  flex: 2; /* Allows the links section to take necessary space */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the links vertically */
+}
+
+.connect-link {
+  background-color: #ffffff;
+  color: #007bff;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 10px 0; /* Adds vertical space between links */
+  border-radius: 15px; /* More pronounced rounded corners */
+  width: 80%; /* Ensures all links have the same width */
+  text-align: center;
+  border: 2px solid #007bff;
+  transition: all 0.3s ease;
+  font-size: 16px; /* Larger font size for better readability */
+  font-weight: bold; /* Makes text bold */
+}
+
+.connect-link:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #0056b3;
+  transform: scale(
+    1.05
+  ); /* Slight increase in size on hover for a dynamic effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .connect-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links-section {
+    width: 100%; /* Full width for the links section on smaller screens */
+  }
+
+  .connect-link {
+    width: 90%; /* Makes links slightly narrower on smaller screens */
+  }
+}
