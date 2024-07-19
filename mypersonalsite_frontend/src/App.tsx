@@ -1,7 +1,8 @@
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./LandingPage";
 // import Certificates from "./screens/Certificates/Certificates";
-import Projects from "./screens/Projects/ProjectsPage";
+import ProjectsPage from "./screens/Projects/ProjectsPage";
+import ProjectDetails from "./components/ProjectDetail/ProjectDetail";
 import CertificatesPage from "./screens/Certificates/Certificates";
 import Skills from "./screens/Skills/Skills";
 import Resume from "./screens/Resume/Resume";
@@ -42,7 +43,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<LandingPage />} />
-        <Route path="/portfolio/projects" element={<Projects />} />
+        <Route path="/portfolio/projects" element={<ProjectsPage />} />
+        <Route path="/portfolio/projects/1" element={<ProjectDetails/>} />
         <Route path="/certificates" element={<CertificatesPage />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/connect-with-me" element={<ConnectWithMe />} />
