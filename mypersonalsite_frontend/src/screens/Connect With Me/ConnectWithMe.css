@@ -27,7 +27,7 @@
   flex: 2; /* Allows the links section to take necessary space */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the links vertically */
+  align-items: center; 
 }
 
 .connect-link {
@@ -35,9 +35,9 @@
   color: #007bff;
   text-decoration: none;
   padding: 15px 30px;
-  margin: 10px 0; /* Adds vertical space between links */
-  border-radius: 15px; /* More pronounced rounded corners */
-  width: 80%; /* Ensures all links have the same width */
+  margin: 10px 0; 
+  border-radius: 15px;
+  width: 80%; 
   text-align: center;
   border: 2px solid #007bff;
   transition: all 0.3s ease;

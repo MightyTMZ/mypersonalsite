@@ -1,5 +1,5 @@
 import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
+// import Footer from '../../components/Footer/Footer';
 import resume from "./resume.pdf";
 import "./Resume.css"
 

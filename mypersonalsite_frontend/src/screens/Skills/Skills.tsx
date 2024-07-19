@@ -4,6 +4,8 @@ import "../../fonts/Poppins.css";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
+import python from "../../assets/Python.png";
+import javascript from "../../assets/JavaScript.png";
 
 const Skills = () => {
   const skills = [
@@ -11,13 +13,13 @@ const Skills = () => {
       title: "Python",
       description:
         "Syntax, data structures, and best practices, enabling them to develop robust and scalable applications",
-      icon: "/media/skills/icon/Python-logo-notext.svg.png",
+      icon: python,
     },
     {
       title: "JavaScript",
       description:
         "Efficiently build interactive and responsive web applications, manipulate the DOM, handle asynchronous operations, and utilize frameworks like React or Node.js for full-stack development.",
-      icon: "/media/skills/icon/JavaScript-logo.png",
+      icon: javascript,
     },
     {
       title: "React",

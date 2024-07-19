@@ -1,8 +1,8 @@
 import "./Projects.css"; // Ensure the CSS file is correctly linked
-import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
+import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
     <div className="container">
       <NavBar />
@@ -31,4 +31,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsPage;

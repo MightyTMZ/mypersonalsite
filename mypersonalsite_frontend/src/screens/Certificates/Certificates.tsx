@@ -1,7 +1,7 @@
 import "./Certificates.css";
 import "../../fonts/Poppins.css"
 import NavBar from "../../components/NavBar/NavBar";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import { Fragment } from "react/jsx-runtime";
 
 interface Issuer {
