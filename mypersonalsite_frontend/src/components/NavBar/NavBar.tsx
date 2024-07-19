@@ -1,65 +1,80 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../fonts/Poppins.css";
+import "./NavBar.css";
 
 const NavBar = () => {
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const goToHome = () => {
+    window.open("/");
+  };
+
   return (
-    <header className="d-flex justify-content-between align-items-center py-3">
-      <h1 className="h3">Tom Zhang</h1>
-      <nav className="d-flex">
-        <a href="#home" className="btn btn-link">
-          Home
-        </a>
-        <a href="#about" className="btn btn-link">
-          About
-        </a>
-        <a href="#contact" className="btn btn-link">
-          Contact
-        </a>
-        <div className="dropdown">
-          <button
-            className="btn btn-link dropdown-toggle"
-            type="button"
-            onClick={toggleDropdown}
-            aria-expanded={isDropdownOpen}
+    <>
+      <header className="navbar-custom d-flex justify-content-between align-items-center py-3">
+        <h1 className="navbar-brand poppins-bold name-tag" onClick={goToHome}>
+          Tom Zhang
+        </h1>
+        <nav className="d-flex align-items-center">
+          <a href="#home" className="nav-item poppins-semibold">
+            Home
+          </a>
+          <a href="/" className="nav-item poppins-semibold">
+            About
+          </a>
+          <a
+            href="mailto:tom.zhang.career@hotmail.com"
+            className="nav-item poppins-semibold"
           >
-            Other
-          </button>
-          <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
-            <a className="dropdown-item" href="#portfolio">
-              Portfolio
-            </a>
-            <a className="dropdown-item" href="#newsletters">
-              Newsletters
-            </a>
-            <a className="dropdown-item" href="#current-ventures">
-              Current Ventures
-            </a>
-            <a className="dropdown-item" href="#skills">
-              Skills
-            </a>
-            <a className="dropdown-item" href="#certificates">
-              My Certificates
-            </a>
-            <a className="dropdown-item" href="#resume">
-              My Resume
-            </a>
-            <a className="dropdown-item" href="#organizations">
-              Organizations
-            </a>
-            <a className="dropdown-item" href="#connect-with-me">
-              Connect with me!
-            </a>
+            Contact
+          </a>
+          <div className="dropdown">
+            <button
+              className="dropdown-toggle nav-item poppins-semibold"
+              onClick={toggleDropdown}
+              aria-expanded={isDropdownOpen}
+              style={{
+                background: "none",
+                border: "none",
+              }}
+            >
+              <span style={{ color: "#fff" }}>Other</span>
+            </button>
+            <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
+              <a className="dropdown-item poppins-semibold" href="#portfolio">
+                Portfolio
+              </a>
+              <a className="dropdown-item poppins-semibold" href="#skills">
+                Skills
+              </a>
+              <a
+                className="dropdown-item poppins-semibold"
+                href="#certificates"
+              >
+                My Certificates
+              </a>
+              <a className="dropdown-item poppins-semibold" href="#resume">
+                My Resume
+              </a>
+              <a
+                className="dropdown-item poppins-semibold last-item"
+                href="#connect-with-me"
+              >
+                Connect with me!
+              </a>
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+      <div
+        style={{ height: "1.5px", background: "#333", borderRadius: "50%" }}
+      ></div>
+    </>
   );
 };
 

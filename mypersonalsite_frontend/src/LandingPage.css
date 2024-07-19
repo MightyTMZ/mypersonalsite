@@ -1,5 +1,66 @@
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(
+    -54deg,
+    #0077b6,
+    #008080,
+    #00b894,
+    #216097,
+    #6c8db6,
+    #405db5
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
 .landing-page {
   font-family: Arial, sans-serif;
+}
+
+.bio-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.bio-para {
+  font-size: 1.2rem;
+}
+
+#name-intro {
+  font-size: 3rem;
+  color: white;
+}
+
+#about {
+  color: white;
+  margin-top: 170px;
+  margin-bottom: 170px;
+}
+
+@media (max-width: 768px){
+  #about {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1028px){
+  #about {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
 }
 
 .header {
@@ -44,10 +105,4 @@
 .introduction p {
   text-align: center; /* Centering text in the introduction */
   margin-top: 20px;
-}
-
-.footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #f0f0f0;
 }

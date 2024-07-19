@@ -1,5 +1,6 @@
 import "./Projects.css"; // Ensure the CSS file is correctly linked
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 const Projects = () => {
   return (
@@ -25,10 +26,7 @@ const Projects = () => {
           </div>
         </div>
       </main>
-      <footer className="text-center py-4">
-        <div className="social-media">{/* Social Media Icons */}</div>
-        <p>Copyright © 2024 Tom Zhang</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

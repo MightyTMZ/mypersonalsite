@@ -1,0 +1,67 @@
+.name-tag {
+  font-size: 2rem;
+}
+
+.navbar-custom {
+  /*background-color: #282c34;  Dark background for contrast */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-item,
+.dropdown-toggle {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  border-radius: 15px;
+  font-size: 1.5rem;
+
+}
+
+.nav-item:hover,
+.dropdown-toggle:hover {
+  color: #000; /* Highlight color on hover */
+}
+
+.dropdown-item {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.dropdown-item:hover {
+  background-color: goldenrod;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  color: #333;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-custom {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start of the navbar */
+  }
+
+  .nav-item,
+  .dropdown-toggle {
+    display: block; /* Make each nav item take up the full line */
+    width: 100%; /* Full width for each nav item */
+    text-align: left; /* Align text to the left */
+  }
+
+  .dropdown-menu {
+    width: 100%; /* Full width for the dropdown */
+  }
+}

@@ -1,4 +1,8 @@
 import "./Certificates.css";
+import "../../fonts/Poppins.css"
+import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
+import { Fragment } from "react/jsx-runtime";
 
 interface Issuer {
   name: string;
@@ -25,7 +29,7 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ certificate }) => {
 
   return (
     <div
-      className="certificate-card"
+      className="certificate-card poppins"
       style={{
         border: "1px solid grey",
         padding: "10px",
@@ -35,6 +39,7 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ certificate }) => {
         <img src={issuer.logo} alt={`${issuer.name} logo`} className="logo" />
       </a>
       <h3>{title}</h3>
+      {/* add a feature that sets the color of the button based on the color of the company's logo*/}
       <button className="view-button" onClick={handleViewCertificate}>
         View
       </button>
@@ -48,16 +53,45 @@ interface CertificatesProps {
 
 const Certificates: React.FC<CertificatesProps> = ({ certificates }) => {
   return (
-    <>
-      <h1>Certificates</h1>
-      <div className="certificates-container" style={{ marginTop: "20px" }}>
-        <hr />
-        {certificates.map((cert, index) => (
-          <CertificateCard key={index} certificate={cert} />
-        ))}
+    <Fragment>
+      <div className="container">
+        <NavBar />
+        <h1 className="certificates-heading poppins poppins-white">Certificates</h1>
+        <div className="certificates-container" style={{ marginTop: "20px" }}>
+          <hr />
+          {certificates.map((cert, index) => (
+            <CertificateCard key={index} certificate={cert} />
+          ))}
+        </div>
       </div>
-    </>
+      {/* <Footer /> */}
+    </Fragment>
   );
 };
 
-export default Certificates;
+const CertificatesPage = () => {
+  let certificates = [
+    {
+      title: "Meta Back-End Developer Professional Certificate",
+      issuer: {
+        name: "Meta",
+        url: "https://www.linkedin.com/company/meta/",
+        logo: "logo", // Assign the imported logo here directly
+      },
+      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
+    },
+    {
+      title: "IBM AI Engineering Professional Certificate",
+      issuer: {
+        name: "IBM",
+        url: "https://www.linkedin.com/company/ibm/",
+        logo: "logo2", // Assign the imported logo here directly
+      },
+      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
+    },
+  ];
+
+  return <Certificates certificates={certificates} />;
+};
+
+export default CertificatesPage;

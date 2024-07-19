@@ -1,5 +1,6 @@
-import React from "react";
+import { Fragment } from "react";
 import "./Skills.css";
+import "../../fonts/Poppins.css";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
@@ -99,22 +100,24 @@ const Skills = () => {
   ];
 
   return (
-    <div className="skills-container container">
-      <NavBar />
-      <main>
-        <div className="skills-grid">
-          {skills.map((skill, index) => (
-            <InfoCard
-              key={index}
-              title={skill.title}
-              description={skill.description}
-              icon={skill.icon}
-            />
-          ))}
-        </div>
-      </main>
+    <Fragment>
+      <div className="skills-container container poppins">
+        <NavBar />
+        <main>
+          <div className="skills-grid">
+            {skills.map((skill, index) => (
+              <InfoCard
+                key={index}
+                title={skill.title}
+                description={skill.description}
+                icon={skill.icon}
+              />
+            ))}
+          </div>
+        </main>
+      </div>{" "}
       <Footer />
-    </div>
+    </Fragment>
   );
 };
 

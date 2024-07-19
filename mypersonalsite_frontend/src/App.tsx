@@ -1,38 +1,60 @@
-import Certificates from "./screens/Certificates/Certificates";
-import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import LandingPage from "./LandingPage";
+import Portfolio from "./screens/Portfolio/Portfolio";
+import Projects from "./Projects";
+import Education from "./screens/Portfolio/Education/Education";
+import References from "./screens/Portfolio/References/References";
+// import Certificates from "./screens/Certificates/Certificates";
+import CertificatesPage from "./screens/Certificates/Certificates";
+import Skills from "./screens/Skills/Skills";
+import Resume from "./screens/Resume/Resume";
 import ConnectWithMe from "./screens/Connect With Me/ConnectWithMe";
-import logo from './assets/meta.webp'; // Correct import path for the logo
-import logo2 from './assets/ibm.jpg'; // Correct import path for the logo
 
 function App() {
-  let certs = [
+  {
+    /*let certs = [
     {
-        title: "Meta Back-End Developer Professional Certificate",
-        issuer: {
-            name: "Meta",
-            url: "https://www.linkedin.com/company/meta/",
-            logo: logo // Assign the imported logo here directly
-        },
-        url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR"
-    }, 
+      title: "Meta Back-End Developer Professional Certificate",
+      issuer: {
+        name: "Meta",
+        url: "https://www.linkedin.com/company/meta/",
+        logo: logo, // Assign the imported logo here directly
+      },
+      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
+    },
     {
       title: "IBM AI Engineering Professional Certificate",
       issuer: {
-          name: "IBM",
-          url: "https://www.linkedin.com/company/ibm/",
-          logo: logo2 // Assign the imported logo here directly
+        name: "IBM",
+        url: "https://www.linkedin.com/company/ibm/",
+        logo: logo2, // Assign the imported logo here directly
       },
-      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR"
+      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
+    },
+  ]; */
   }
-  ];
 
   return (
-      <div className="container">
-        <NavBar />
-        <ConnectWithMe/>
-        <Footer />
-      </div>
+    <Router>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+      ></link>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<LandingPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/projects" element={<Projects />} />
+        <Route path="/portfolio/education" element={<Education />} />
+        <Route path="/portfolio/references" element={<References />} />
+        <Route path="/certificates" element={<CertificatesPage />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/connect-with-me" element={<ConnectWithMe />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </Router>
   );
 }
 
