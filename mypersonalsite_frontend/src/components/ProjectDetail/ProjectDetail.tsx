@@ -39,6 +39,7 @@ interface ProjectDetailProps {
 }
 
 const ProjectDetails = () => {
+  // the prop we pass here is a single project
   // const { projectId } = useParams();
   // we then send a request to the endpoint on the backend server to
   const project = {
@@ -68,7 +69,7 @@ const ProjectDetails = () => {
   if (!project) {
     return (
       <Fragment>
-        <div className="container">
+        <div className="container poppins">
           <NavBar />
           <h2>Project not found</h2>
         </div>
