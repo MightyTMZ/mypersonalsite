@@ -1,8 +1,10 @@
 import "./Certificates.css";
 import "../../fonts/Poppins.css"
+import MetaLogo from "../../assets/meta.webp";
 import NavBar from "../../components/NavBar/NavBar";
 // import Footer from "../../components/Footer/Footer";
 import { Fragment } from "react/jsx-runtime";
+
 
 interface Issuer {
   name: string;
@@ -76,16 +78,7 @@ const CertificatesPage = () => {
       issuer: {
         name: "Meta",
         url: "https://www.linkedin.com/company/meta/",
-        logo: "logo", // Assign the imported logo here directly
-      },
-      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
-    },
-    {
-      title: "IBM AI Engineering Professional Certificate",
-      issuer: {
-        name: "IBM",
-        url: "https://www.linkedin.com/company/ibm/",
-        logo: "logo2", // Assign the imported logo here directly
+        logo: MetaLogo,
       },
       url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
     },

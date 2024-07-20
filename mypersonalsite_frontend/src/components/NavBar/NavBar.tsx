@@ -46,7 +46,10 @@ const NavBar = () => {
               <span style={{ color: "#fff" }}>Other</span>
             </button>
             <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
-              <a className="dropdown-item poppins-semibold" href="#portfolio">
+              <a
+                className="dropdown-item poppins-semibold"
+                href="https://github.com/MightyTMZ/"
+              >
                 Portfolio
               </a>
               <a className="dropdown-item poppins-semibold" href="#skills">

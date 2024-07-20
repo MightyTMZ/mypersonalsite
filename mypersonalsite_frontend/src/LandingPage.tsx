@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap CSS is import
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import intro_icon from "./assets/name_icon.png";
+import portrait from "./assets/tom_zhang_portrait.webp";
 import "./LandingPage.css";
 
 const LandingPage = () => {
@@ -46,11 +47,12 @@ const LandingPage = () => {
           </div>
           <div className="row align-items-center my-5">
             <div className="col-md-4">
-              <div
-                className="image-placeholder bg-secondary"
-                style={{ width: "100%", height: "300px" }}
-              >
-                {/* Placeholder or Image Tag Here */}
+              <div className="image-container">
+                <img
+                  src={portrait}
+                  alt="Tom Zhang's portrait"
+                  className="styled-image"
+                />
               </div>
             </div>
             <div className="col-md-8" id="about">
@@ -72,7 +74,6 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-          
         </main>
       </div>
       <Footer />

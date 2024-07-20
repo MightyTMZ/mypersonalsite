@@ -6,6 +6,17 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import python from "../../assets/Python.png";
 import javascript from "../../assets/JavaScript.png";
+import django from "../../assets/django.png"; 
+import tensorflow from "../../assets/tensorflow.png"; 
+import ml from "../../assets/machine leanring.png"; 
+import ds from "../../assets/data science.png"; 
+import html_css from "../../assets/html_css.svg"; 
+import react from "../../assets/react.png";
+import pytorch from "../../assets/pytorch.png";
+import sql from "../../assets/sql.png";
+import git_github from "../../assets/git-vs-github.png";
+import docker from "../../assets/docker.webp";
+
 
 const Skills = () => {
   const skills = [
@@ -25,79 +36,61 @@ const Skills = () => {
       title: "React",
       description:
         "Build modern, dynamic web applications with ease using React's component-based architecture and powerful state management.",
-      icon: "/media/skills/icon/React-logo.png",
-    },
-    {
-      title: "Node.js",
-      description:
-        "Develop scalable server-side applications and APIs with Node.js, leveraging JavaScript on the backend for efficient development.",
-      icon: "/media/skills/icon/Nodejs-logo.png",
+      icon: react,
     },
     {
       title: "HTML & CSS",
       description:
         "Create visually appealing and responsive web pages using HTML for structure and CSS for styling, ensuring cross-browser compatibility.",
-      icon: "/media/skills/icon/HTML-CSS-logo.png",
+      icon: html_css,
     },
     {
       title: "Django",
       description:
         "Develop robust and secure web applications with Django, a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
-      icon: "/media/skills/icon/Django-logo.png",
+      icon: django,
     },
     {
       title: "TensorFlow",
       description:
         "Build and deploy machine learning models with TensorFlow, an open-source library for deep learning and neural networks.",
-      icon: "/media/skills/icon/TensorFlow-logo.png",
-    },
-    {
-      title: "Keras",
-      description:
-        "Create powerful neural networks with Keras, a high-level API for building and training deep learning models.",
-      icon: "/media/skills/icon/Keras-logo.png",
+      icon: tensorflow,
     },
     {
       title: "PyTorch",
       description:
         "Develop machine learning models and perform tensor computations with PyTorch, a flexible deep learning framework.",
-      icon: "/media/skills/icon/PyTorch-logo.png",
+      icon: pytorch,
     },
     {
       title: "SQL",
       description:
         "Manage and manipulate relational databases using SQL, ensuring efficient data retrieval and storage for applications.",
-      icon: "/media/skills/icon/SQL-logo.png",
+      icon: sql,
     },
     {
       title: "Git & GitHub",
       description:
         "Version control your projects and collaborate with others using Git and GitHub, streamlining the development workflow.",
-      icon: "/media/skills/icon/GitHub-logo.png",
+      icon: git_github,
     },
     {
       title: "Docker",
       description:
         "Containerize your applications with Docker, ensuring consistent environments across development, testing, and production.",
-      icon: "/media/skills/icon/Docker-logo.png",
-    },
-    {
-      title: "AWS",
-      description:
-        "Deploy and scale applications with Amazon Web Services (AWS), utilizing a wide range of cloud services for infrastructure and development.",
-      icon: "/media/skills/icon/AWS-logo.png",
+      icon: docker,
     },
     {
       title: "Machine Learning",
       description:
         "Develop predictive models and algorithms to uncover insights from data, applying machine learning techniques for various applications.",
-      icon: "/media/skills/icon/MachineLearning-logo.png",
+      icon: ml,
     },
     {
       title: "Data Science",
       description:
         "Analyze and interpret complex data sets to inform decision-making, using statistical techniques and data visualization tools.",
-      icon: "/media/skills/icon/DataScience-logo.png",
+      icon: ds,
     },
   ];
 
