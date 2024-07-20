@@ -2,7 +2,8 @@ import "./ConnectWithMe.css";
 import "../../fonts/Poppins.css";
 import { Fragment } from "react/jsx-runtime";
 import NavBar from "../../components/NavBar/NavBar";
-import pfp from "../../assets/blank_pfp.webp";
+import pfp from "../../assets/tom_zhang_portrait.webp";
+
 
 const ConnectWithMe = () => {
   return (

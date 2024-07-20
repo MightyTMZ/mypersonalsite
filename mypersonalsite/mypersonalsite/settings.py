@@ -66,10 +66,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mypersonalsite.urls'
 
-CORS_ALLOWED_ORIGINS = [
+"""CORS_ALLOWED_ORIGINS = [
     os.getenv("LOCAL_DEVELOPMENT_SERVER"), 
 
-]
+]"""
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
