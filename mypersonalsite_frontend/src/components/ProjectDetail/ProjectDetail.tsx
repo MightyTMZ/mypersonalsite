@@ -1,16 +1,16 @@
 import NavBar from "../NavBar/NavBar";
 import { Fragment } from "react/jsx-runtime";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import "./ProjectDetail.css";
 import testimage from "../../assets/JavaScript.png";
-import React from "react";
+// import React from "react";
 import GitHub from "../../assets/GitHub.png";
 import Devpost from "../../assets/Devpost.svg";
 import Site from "../../assets/Website.png";
 import Demo from "../../assets/demo.png";
 import "../../fonts/Poppins.css"
 
-interface Link {
+{/* interface Link {
   link: string;
   type: string; // e.g., "GitHub", "Site"
 }
@@ -32,11 +32,11 @@ interface Project {
   images: Image[];
   links: Link[];
   achievements: Achievement[]; // Define this if you have achievements
-}
+} */}
 
-interface ProjectDetailProps {
-  projects: Project[];
-}
+// interface ProjectDetailProps {
+//  projects: Project[];
+// }
 
 const ProjectDetails = () => {
   // the prop we pass here is a single project
