@@ -1,16 +1,15 @@
 import NavBar from "../NavBar/NavBar";
 import { Fragment } from "react/jsx-runtime";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./ProjectDetail.css";
-import testimage from "../../assets/JavaScript.png";
-// import React from "react";
+import React, { useEffect, useState } from "react";
 import GitHub from "../../assets/GitHub.png";
 import Devpost from "../../assets/Devpost.svg";
 import Site from "../../assets/Website.png";
 import Demo from "../../assets/demo.png";
-import "../../fonts/Poppins.css"
+import "../../fonts/Poppins.css";
 
-{/* interface Link {
+interface Link {
   link: string;
   type: string; // e.g., "GitHub", "Site"
 }
@@ -31,40 +30,30 @@ interface Project {
   visible: boolean;
   images: Image[];
   links: Link[];
-  achievements: Achievement[]; // Define this if you have achievements
-} */}
-
-// interface ProjectDetailProps {
-//  projects: Project[];
-// }
+  achievements: Achievement[];
+}
 
 const ProjectDetails = () => {
-  // the prop we pass here is a single project
-  // const { projectId } = useParams();
-  // we then send a request to the endpoint on the backend server to
-  const project = {
-    id: 1,
-    title: "BookFindr",
-    description:
-      "An AI book recommendation system for avid readers. Uses the ChatGPT API integrated with a vibrant user interface",
-    visible: false,
-    images: [
-      {
-        image: testimage,
-      },
-    ],
-    links: [
-      {
-        link: "https://github.com/MightyTMZ/BookFindr",
-        type: "GitHub",
-      },
-      {
-        link: "https://bookfindr2.pythonanywhere.com",
-        type: "Site",
-      },
-    ],
-    achievements: [],
-  };
+  const { projectId } = useParams(); // we read the parameter taken in the url
+  const [project, setProject] = useState<Project | null>(null);
+
+  const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
+
+  useEffect(() => {
+    fetch(`${backendServerAdress}/projects/${projectId}/`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProject(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching article data:", error);
+      });
+  }, []);
 
   if (!project) {
     return (
@@ -96,7 +85,7 @@ const ProjectDetails = () => {
         <div className="project-details">
           <h1 className="project-title poppins-bold">{project.title}</h1>
           {/* Map through the images */}
-          {project.images.map((img, index) => (
+          {project.images.map((img: any, index: number) => (
             <img
               key={index}
               src={img.image}
@@ -108,7 +97,7 @@ const ProjectDetails = () => {
           <p className="project-description">{project.description}</p>
           <div className="project-links">
             {/* Map through the links */}
-            {project.links.map((link, index) => (
+            {project.links.map((link: any, index: number) => (
               <a
                 key={index}
                 href={link.link}

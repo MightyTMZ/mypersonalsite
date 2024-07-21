@@ -48,25 +48,25 @@ const NavBar = () => {
             <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
               <a
                 className="dropdown-item poppins-semibold"
-                href="https://github.com/MightyTMZ/"
+                href="#/portfolio/projects"
               >
                 Portfolio
               </a>
-              <a className="dropdown-item poppins-semibold" href="#skills">
+              <a className="dropdown-item poppins-semibold" href="#/skills">
                 Skills
               </a>
               <a
                 className="dropdown-item poppins-semibold"
-                href="#certificates"
+                href="#/certificates"
               >
                 My Certificates
               </a>
-              <a className="dropdown-item poppins-semibold" href="#resume">
+              <a className="dropdown-item poppins-semibold" href="#/resume">
                 My Resume
               </a>
               <a
                 className="dropdown-item poppins-semibold last-item"
-                href="#connect-with-me"
+                href="#/connect-with-me"
               >
                 Connect with me!
               </a>

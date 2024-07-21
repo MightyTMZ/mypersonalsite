@@ -3,126 +3,37 @@ import NavBar from "../../components/NavBar/NavBar";
 // import Footer from "../../components/Footer/Footer";
 import ProjectBox from "../../components/ProjectBox/ProjectBox";
 import testimage from "../../assets/JavaScript.png";
+import { useState, useEffect } from "react";
 
-const ProjectsPage = () => {
-  let projects = [
-    {
-      id: 1,
-      title: "IoT house",
-      description: "Made an IoT house using 74HC595, a keypad, and servos",
-      visible: false,
-      images: [
-        {
-          image: testimage,
-        },
-      ],
-      links: [{
-        link: "https://github.com/MightyTMZ/BookFindr",
-        type: "Demo",
-      },],
-      achievements: [
-        {
-          title: "100% on summative",
-          description:
-            "Achieved a 100% on the grade 10 computer technology summative project",
-          icon: "/media/icon/star.png",
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: "BookFindr",
-      description:
-        "An AI book recommendation system for avid readers. Uses the ChatGPT API integrated with a vibrant user interface",
-      visible: false,
-      images: [
-        {
-          image: testimage,
-        },
-      ],
-      links: [
-        {
-          link: "https://github.com/MightyTMZ/BookFindr",
-          type: "GitHub",
-        },
-        {
-          link: "https://bookfindr2.pythonanywhere.com",
-          type: "Site",
-        },
-      ],
-      achievements: [],
-    },
-    {
-      id: 2,
-      title: "BookFindr",
-      description:
-        "An AI book recommendation system for avid readers. Uses the ChatGPT API integrated with a vibrant user interface",
-      visible: false,
-      images: [
-        {
-          image: testimage,
-        },
-      ],
-      links: [
-        {
-          link: "https://github.com/MightyTMZ/BookFindr",
-          type: "GitHub",
-        },
-        {
-          link: "https://bookfindr2.pythonanywhere.com",
-          type: "Site",
-        },
-      ],
-      achievements: [],
-    },
-    {
-      id: 2,
-      title: "BookFindr",
-      description:
-        "An AI book recommendation system for avid readers. Uses the ChatGPT API integrated with a vibrant user interface",
-      visible: false,
-      images: [
-        {
-          image: testimage,
-        },
-      ],
-      links: [
-        {
-          link: "https://github.com/MightyTMZ/BookFindr",
-          type: "GitHub",
-        },
-        {
-          link: "https://bookfindr2.pythonanywhere.com",
-          type: "Site",
-        },
-      ],
-      achievements: [],
-    },
-    {
-      id: 2,
-      title: "BookFindr",
-      description:
-        "An AI book recommendation system for avid readers. Uses the ChatGPT API integrated with a vibrant user interface",
-      visible: false,
-      images: [
-        {
-          image: testimage,
-        },
-      ],
-      links: [
-        {
-          link: "https://github.com/MightyTMZ/BookFindr",
-          type: "GitHub",
-        },
-        {
-          link: "https://bookfindr2.pythonanywhere.com",
-          type: "Site",
-        },
-      ],
-      achievements: [],
-    },
-  ];
+interface Link {
+  link: string;
+  type: string; // e.g., "GitHub", "Site"
+}
 
+interface Image {
+  image: string;
+}
+
+interface Achievement {
+  title: string;
+  description: string;
+}
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  visible: boolean;
+  images: Image[];
+  links: Link[];
+  achievements: Achievement[]; // Define this if you have achievements
+}
+
+interface ProjectsList {
+  projects: Project[];
+}
+
+const ProjectsPage: React.FC<ProjectsList> = ({ projects }) => {
   return (
     <div className="container">
       <NavBar />
