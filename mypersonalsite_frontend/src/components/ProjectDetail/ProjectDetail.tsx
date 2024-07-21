@@ -34,13 +34,14 @@ interface Project {
 }
 
 const ProjectDetails = () => {
-  const { projectId } = useParams(); // we read the parameter taken in the url
+  const { id } = useParams(); // we read the parameter taken in the url
+  console.log(id);
   const [project, setProject] = useState<Project | null>(null);
 
   const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
 
   useEffect(() => {
-    fetch(`${backendServerAdress}/projects/${projectId}/`)
+    fetch(`${backendServerAdress}/projects/${id}/`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -82,7 +83,7 @@ const ProjectDetails = () => {
     <Fragment>
       <div className="container poppins">
         <NavBar />
-        <div className="project-details">
+        <div className="project-details mt-4">
           <h1 className="project-title poppins-bold">{project.title}</h1>
           {/* Map through the images */}
           {project.images.map((img: any, index: number) => (

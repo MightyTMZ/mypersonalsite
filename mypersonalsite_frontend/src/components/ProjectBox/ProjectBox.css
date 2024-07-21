@@ -28,6 +28,7 @@
   color: #fff;
   text-align: center; /* Center-align the title for better aesthetics */
   margin-bottom: 15px; /* Adjust spacing */
+  color: white;
 }
 
 .project-link:hover {
@@ -39,6 +40,7 @@
   color: #fff;
   text-align: center; /* Center-align the description */
   margin-bottom: 20px; /* Increase bottom margin for spacing */
+  color: white;
 }
 
 .btn-primary {

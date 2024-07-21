@@ -2,8 +2,7 @@ import "./ProjectsPage.css"; // Ensure the CSS file is correctly linked
 import NavBar from "../../components/NavBar/NavBar";
 // import Footer from "../../components/Footer/Footer";
 import ProjectBox from "../../components/ProjectBox/ProjectBox";
-import testimage from "../../assets/JavaScript.png";
-import { useState, useEffect } from "react";
+
 
 interface Link {
   link: string;
@@ -34,6 +33,7 @@ interface ProjectsList {
 }
 
 const ProjectsPage: React.FC<ProjectsList> = ({ projects }) => {
+
   return (
     <div className="container">
       <NavBar />

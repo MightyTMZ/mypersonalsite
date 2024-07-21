@@ -38,6 +38,9 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
     navigate(url);
   };
 
+  const backendServerAdress =
+    "https://tomzhangpersonalsite.pythonanywhere.com/";
+
   const image_types_for_links: ImageTypes = {
     GitHub: GitHub,
     Site: Site,
@@ -47,9 +50,19 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
 
   return (
     <div className="project-item poppins mt-4">
-      {photo && <img src={photo} alt={title} className="project-image" />}
-      <h3 className="project-title">{title}</h3>
-      <p className="project-description">{description}</p>
+      {photo && (
+        <img
+          src={`${backendServerAdress}${photo}`}
+          alt={title}
+          className="project-image"
+        />
+      )}
+      <h3 className="project-title" style={{ color: "white" }}>
+        {title}
+      </h3>
+      <p className="project-description" style={{ color: "white" }}>
+        {description.substring(0, 100)}...
+      </p>
       <div className="project-links">
         {links &&
           links.map((link, index) => (
@@ -58,7 +71,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
               href={link.link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ marginRight: "10px" }}
+              style={{ marginRight: "10px", color: "white" }}
             >
               <img
                 src={image_types_for_links[link.type]}
