@@ -17,5 +17,7 @@ class ProjectList(views.APIView):
 @api_view(['GET'])
 def project_detail(request, pk):
     project = get_object_or_404(Project, pk=pk)
+    project.views += 1
+    project.save()
     serializer = ProjectSerializer(project)
     return Response(serializer.data)

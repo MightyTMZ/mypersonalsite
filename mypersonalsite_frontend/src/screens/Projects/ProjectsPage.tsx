@@ -3,7 +3,6 @@ import NavBar from "../../components/NavBar/NavBar";
 // import Footer from "../../components/Footer/Footer";
 import ProjectBox from "../../components/ProjectBox/ProjectBox";
 
-
 interface Link {
   link: string;
   type: string; // e.g., "GitHub", "Site"
@@ -25,7 +24,8 @@ interface Project {
   visible: boolean;
   images: Image[];
   links: Link[];
-  achievements: Achievement[]; // Define this if you have achievements
+  achievements: Achievement[];
+  views: number;
 }
 
 interface ProjectsList {
@@ -33,7 +33,6 @@ interface ProjectsList {
 }
 
 const ProjectsPage: React.FC<ProjectsList> = ({ projects }) => {
-
   return (
     <div className="container">
       <NavBar />
@@ -52,6 +51,7 @@ const ProjectsPage: React.FC<ProjectsList> = ({ projects }) => {
                   title={project.title}
                   description={project.description}
                   links={project.links}
+                  views={project.views}
                 />
               </div>
             ))}

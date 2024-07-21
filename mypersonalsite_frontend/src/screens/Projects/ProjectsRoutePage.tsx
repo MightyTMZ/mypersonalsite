@@ -22,7 +22,8 @@ interface Project {
   visible: boolean;
   images: Image[];
   links: Link[];
-  achievements: Achievement[]; // Define this if you have achievements
+  achievements: Achievement[];
+  views: number;
 }
 
 

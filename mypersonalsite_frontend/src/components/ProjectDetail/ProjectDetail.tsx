@@ -31,6 +31,7 @@ interface Project {
   images: Image[];
   links: Link[];
   achievements: Achievement[];
+  views: number;
 }
 
 const ProjectDetails = () => {

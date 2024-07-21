@@ -19,6 +19,7 @@ interface ProjectBoxProps {
   title: string;
   description: string;
   links?: Link[];
+  views: number;
 }
 
 interface ImageTypes {
@@ -31,6 +32,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
   title,
   description,
   links,
+  views
 }) => {
   const navigate = useNavigate(); // instantiate a navigator
 
@@ -90,6 +92,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
       >
         View details
       </button>
+      <p style={{ fontSize: "1rem" }}>{views}</p>
     </div>
   );
 };
