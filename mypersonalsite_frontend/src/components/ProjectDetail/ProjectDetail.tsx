@@ -2,7 +2,7 @@ import NavBar from "../NavBar/NavBar";
 import { Fragment } from "react/jsx-runtime";
 import { useParams } from "react-router-dom";
 import "./ProjectDetail.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GitHub from "../../assets/GitHub.png";
 import Devpost from "../../assets/Devpost.svg";
 import Site from "../../assets/Website.png";

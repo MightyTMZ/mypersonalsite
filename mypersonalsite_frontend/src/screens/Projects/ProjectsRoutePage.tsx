@@ -25,9 +25,6 @@ interface Project {
   achievements: Achievement[]; // Define this if you have achievements
 }
 
-interface ProjectsList {
-  projects: Project[];
-}
 
 const ProjectsRoutePage = () => {
   let [projects, setProjects] = useState<Project[]>([]);
