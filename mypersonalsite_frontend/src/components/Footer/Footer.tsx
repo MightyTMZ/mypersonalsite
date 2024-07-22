@@ -38,7 +38,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faTwitter} />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="www.linkedin.com/in/tom-zhang-485341274"
           aria-label="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/MightyTMZ"
           aria-label="GitHub"
           target="_blank"
           rel="noopener noreferrer"
