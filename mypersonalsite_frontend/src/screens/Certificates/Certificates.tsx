@@ -84,6 +84,8 @@ const CertificatesPage = () => {
     },
   ];
 
+  document.title = "Tom Zhang - Certificates";
+
   return <Certificates certificates={certificates} />;
 };
 

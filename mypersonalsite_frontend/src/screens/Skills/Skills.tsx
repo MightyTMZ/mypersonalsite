@@ -19,6 +19,7 @@ import docker from "../../assets/docker.webp";
 
 
 const Skills = () => {
+  document.title = "Tom Zhang - Skills";
   const skills = [
     {
       title: "Python",

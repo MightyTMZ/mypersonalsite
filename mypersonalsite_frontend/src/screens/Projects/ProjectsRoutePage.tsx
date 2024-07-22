@@ -51,6 +51,8 @@ const ProjectsRoutePage = () => {
   }, []);*/
   }
 
+  document.title = "Tom Zhang - Projects";
+
   return (
     <div>
       <ProjectsPage />

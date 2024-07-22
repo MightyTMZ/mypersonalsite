@@ -4,8 +4,9 @@ import { Fragment } from "react/jsx-runtime";
 import NavBar from "../../components/NavBar/NavBar";
 import pfp from "../../assets/tom_zhang_portrait.webp";
 
-
 const ConnectWithMe = () => {
+  document.title = "Tom Zhang - Connect with me";
+
   return (
     <Fragment>
       <div className="container">
