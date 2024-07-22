@@ -107,7 +107,7 @@ const ProjectDetails = () => {
           {project.images.map((img: any, index: number) => (
             <img
               key={index}
-              src={img.image}
+              src={`${backendServerAdress}${img.image}`}
               alt={project.title}
               className="project-image"
             />
