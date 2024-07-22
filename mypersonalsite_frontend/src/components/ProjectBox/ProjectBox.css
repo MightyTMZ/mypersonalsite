@@ -17,8 +17,7 @@
 }
 
 .project-image {
-  width: 100%; /* Use 100% of the width of its container */
-  height: auto; /* Maintain aspect ratio */
+  height: 40px; /* Maintain aspect ratio */
   margin-bottom: 20px; /* Increased space below the image */
   max-width: 300px; /* Set a max-width to control the size on larger screens */
 }
