@@ -5,11 +5,28 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
 
-  // implement logic to get the number of views on your website here
+  const backendServerAdress = "http://127.0.0.1:8000/";
+  const [views, setViews] = useState(0);
 
+  useEffect(() => {
+    fetch(`${backendServerAdress}/views/count`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setViews(data.count);
+      })
+      .catch((error) => {
+        console.error("Error fetching views:", error);
+      });
+  }, []);
   return (
     <footer className="footer">
       <div className="social-media">
@@ -39,7 +56,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="views-counter">
-        <span>Views: 303,618</span>
+        <span>Views: {views}</span>
         {/*Placeholder for now*/}
       </div>
       <p>Copyright © 2024 Tom Zhang</p>

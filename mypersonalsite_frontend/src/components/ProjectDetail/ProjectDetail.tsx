@@ -97,6 +97,8 @@ const ProjectDetails = () => {
     Devpost: Devpost,
   };
 
+  document.title = `Tom Zhang - ${project.title}`;
+
   return (
     <Fragment>
       <div className="container poppins">

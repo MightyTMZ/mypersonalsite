@@ -26,7 +26,8 @@ urlpatterns = [
     path('blog/', include('blog.urls')), # make sure you add a page on the frontend that consolidates all your articles
     path('current-ventures/', include('current_ventures.urls')), 
     path('skills/', include('skills.urls')), 
-    path('achievements/', include('achievements.urls'))
+    path('achievements/', include('achievements.urls')), 
+    path('views/', include('home.urls')) # the views count for website hits is in the home.models
 ]
 
 if settings.DEBUG:
