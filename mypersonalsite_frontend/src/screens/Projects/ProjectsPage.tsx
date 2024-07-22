@@ -69,22 +69,27 @@ const ProjectsPage: React.FC = () => {
       <main>
         <div className="container project-container">
           <div className="row">
-            {projects.map((project) => (
-              <div key={project.id} className="col-12 col-md-6 col-lg-4 mb-4">
-                <ProjectBox
-                  id={project.id}
-                  photo={
-                    project.images.length > 0
-                      ? project.images[0].image
-                      : undefined
-                  }
-                  title={project.title}
-                  description={project.description}
-                  links={project.links}
-                  views={project.views}
-                />
-              </div>
-            ))}
+            {projects
+              .filter((project) => project.visible)
+              .map((filteredProject) => (
+                <div
+                  key={filteredProject.id}
+                  className="col-12 col-md-6 col-lg-4 mb-4"
+                >
+                  <ProjectBox
+                    id={filteredProject.id}
+                    photo={
+                      filteredProject.images.length > 0
+                        ? filteredProject.images[0].image
+                        : undefined
+                    }
+                    title={filteredProject.title}
+                    description={filteredProject.description}
+                    links={filteredProject.links}
+                    views={filteredProject.views}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </main>

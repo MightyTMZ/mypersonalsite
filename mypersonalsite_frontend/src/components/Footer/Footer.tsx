@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 const Footer = () => {
   const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
-  const [views, setViews] = useState(0);
+  const [views, setViews] = useState("-"); // set this to a good default value instead of 0
 
   useEffect(() => {
     fetch(`${backendServerAdress}/views/count`)
