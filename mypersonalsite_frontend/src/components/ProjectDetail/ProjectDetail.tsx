@@ -8,6 +8,7 @@ import Devpost from "../../assets/Devpost.svg";
 import Site from "../../assets/Website.png";
 import Demo from "../../assets/demo.png";
 import "../../fonts/Poppins.css";
+import ClipLoader from "react-spinners/ClipLoader"; // Import the spinner
 
 interface Link {
   link: string;
@@ -38,6 +39,7 @@ const ProjectDetails = () => {
   const { id } = useParams(); // we read the parameter taken in the url
   console.log(id);
   const [project, setProject] = useState<Project | null>(null);
+  const [loading, setLoading] = useState<boolean>(true); // State to track loading status
 
   const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
 
@@ -51,11 +53,27 @@ const ProjectDetails = () => {
       })
       .then((data) => {
         setProject(data);
+        setLoading(false); // Set loading to false after data is fetched
       })
       .catch((error) => {
-        console.error("Error fetching article data:", error);
+        console.error("Error fetching project data:", error);
+        setLoading(false); // Set loading to false in case of an error
       });
-  }, []);
+  }, [id]);
+
+  if (loading) {
+    return (
+      <Fragment>
+        <div className="container poppins">
+          <NavBar />
+          <div className="loading-container">
+            <ClipLoader size={50} color={"#123abc"} loading={loading} />
+            <p>Loading...</p>
+          </div>
+        </div>
+      </Fragment>
+    );
+  }
 
   if (!project) {
     return (
@@ -64,7 +82,6 @@ const ProjectDetails = () => {
           <NavBar />
           <h2>Project not found</h2>
         </div>
-        ;
       </Fragment>
     );
   }

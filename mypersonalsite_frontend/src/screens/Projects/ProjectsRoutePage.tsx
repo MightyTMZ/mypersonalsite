@@ -1,7 +1,8 @@
 import ProjectsPage from "./ProjectsPage";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-interface Link {
+{
+  /* interface Link {
   link: string;
   type: string; // e.g., "GitHub", "Site"
 }
@@ -25,10 +26,11 @@ interface Project {
   achievements: Achievement[];
   views: number;
 }
-
-
+*/
+}
 const ProjectsRoutePage = () => {
-  let [projects, setProjects] = useState<Project[]>([]);
+  {
+    /*let [projects, setProjects] = useState<Project[]>([]);
 
   const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
 
@@ -46,11 +48,12 @@ const ProjectsRoutePage = () => {
       .catch((error) => {
         console.error("Error fetching article data:", error);
       });
-  }, []);
+  }, []);*/
+  }
 
   return (
     <div>
-      <ProjectsPage projects={projects} />
+      <ProjectsPage />
     </div>
   );
 };

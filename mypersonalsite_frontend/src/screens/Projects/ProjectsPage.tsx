@@ -1,7 +1,8 @@
-import "./ProjectsPage.css"; // Ensure the CSS file is correctly linked
+import "./ProjectsPage.css";
 import NavBar from "../../components/NavBar/NavBar";
-// import Footer from "../../components/Footer/Footer";
 import ProjectBox from "../../components/ProjectBox/ProjectBox";
+import { useEffect, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface Link {
   link: string;
@@ -28,11 +29,40 @@ interface Project {
   views: number;
 }
 
-interface ProjectsList {
-  projects: Project[];
-}
+const ProjectsPage: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState<boolean>(true); // State to track loading status
 
-const ProjectsPage: React.FC<ProjectsList> = ({ projects }) => {
+  const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
+
+  useEffect(() => {
+    fetch(`${backendServerAdress}/projects/all`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProjects(data);
+        setLoading(false); // Set loading to false after data is fetched
+      })
+      .catch((error) => {
+        console.error("Error fetching projects data:", error);
+        setLoading(false); // Set loading to false in case of an error
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="container">
+        <NavBar />
+        <ClipLoader size={50} color={"#123abc"} loading={loading} />
+        <p>Loading projects...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="container">
       <NavBar />
