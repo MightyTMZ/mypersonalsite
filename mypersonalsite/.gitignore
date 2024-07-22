@@ -23,6 +23,3 @@ package-lock.json
 coverage/
 *.log
 .DS_STORE
-
-/static/
-/media/
