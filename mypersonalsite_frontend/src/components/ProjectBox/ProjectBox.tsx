@@ -32,7 +32,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
   title,
   description,
   links,
-  views
+  views,
 }) => {
   const navigate = useNavigate(); // instantiate a navigator
 
@@ -92,7 +92,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
       >
         View details
       </button>
-      <p style={{ fontSize: "1rem" }}>{views}</p>
+      <p style={{ fontSize: "1rem" }}>Views: {views}</p>
     </div>
   );
 };
