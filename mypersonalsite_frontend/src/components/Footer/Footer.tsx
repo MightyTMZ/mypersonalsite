@@ -8,8 +8,7 @@ import {
 import { useEffect, useState } from "react";
 
 const Footer = () => {
-
-  const backendServerAdress = "http://127.0.0.1:8000/";
+  const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
   const [views, setViews] = useState(0);
 
   useEffect(() => {
