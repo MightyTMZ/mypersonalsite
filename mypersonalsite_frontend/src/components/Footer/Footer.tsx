@@ -1,4 +1,5 @@
 import "./Footer.css";
+import "../../fonts/Poppins.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -27,7 +28,7 @@ const Footer = () => {
       });
   }, []);
   return (
-    <footer className="footer">
+    <footer className="footer poppins">
       <div className="social-media">
         <a
           href="https://x.com/tom_zhang20"

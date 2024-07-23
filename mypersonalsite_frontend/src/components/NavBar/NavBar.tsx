@@ -24,7 +24,7 @@ const NavBar = () => {
           <a href="#home" className="nav-item poppins-semibold mx-2">
             Home
           </a>
-          <a href="#about" className="nav-item poppins-semibold mx-2">
+          <a href="#home" className="nav-item poppins-semibold mx-2">
             About
           </a>
           <a
