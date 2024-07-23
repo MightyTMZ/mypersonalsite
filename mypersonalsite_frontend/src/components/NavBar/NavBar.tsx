@@ -16,34 +16,35 @@ const NavBar = () => {
 
   return (
     <>
-      <header className="navbar-custom d-flex justify-content-between align-items-center py-3">
+      <header className="navbar-custom d-flex justify-content-between align-items-center py-3 px-4">
         <h1 className="navbar-brand poppins-bold name-tag" onClick={goToHome}>
           Tom Zhang
         </h1>
         <nav className="d-flex align-items-center">
-          <a href="#home" className="nav-item poppins-semibold">
+          <a href="#home" className="nav-item poppins-semibold mx-2">
             Home
           </a>
-          <a href="/" className="nav-item poppins-semibold">
+          <a href="#about" className="nav-item poppins-semibold mx-2">
             About
           </a>
           <a
             href="mailto:tom.zhang.career@hotmail.com"
-            className="nav-item poppins-semibold"
+            className="nav-item poppins-semibold mx-2"
           >
             Contact
           </a>
           <div className="dropdown">
             <button
-              className="dropdown-toggle nav-item poppins-semibold"
+              className="dropdown-toggle nav-item poppins-semibold mx-2"
               onClick={toggleDropdown}
               aria-expanded={isDropdownOpen}
               style={{
                 background: "none",
                 border: "none",
+                color: "#fff",
               }}
             >
-              <span style={{ color: "#fff" }}>Other</span>
+              Other
             </button>
             <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
               <a
