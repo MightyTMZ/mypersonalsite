@@ -1,10 +1,11 @@
 import "./Certificates.css";
-import "../../fonts/Poppins.css"
+import "../../fonts/Poppins.css";
 import MetaLogo from "../../assets/meta.webp";
+import IBM_Logo from "../../assets/ibm.jpg";
+import Wharton_Logo from "../../assets/Wharton.png";
 import NavBar from "../../components/NavBar/NavBar";
 // import Footer from "../../components/Footer/Footer";
 import { Fragment } from "react/jsx-runtime";
-
 
 interface Issuer {
   name: string;
@@ -58,7 +59,9 @@ const Certificates: React.FC<CertificatesProps> = ({ certificates }) => {
     <Fragment>
       <div className="container">
         <NavBar />
-        <h1 className="certificates-heading poppins poppins-white">Certificates</h1>
+        <h1 className="certificates-heading poppins poppins-white">
+          Certificates
+        </h1>
         <div className="certificates-container" style={{ marginTop: "20px" }}>
           <hr />
           {certificates.map((cert, index) => (
@@ -81,6 +84,24 @@ const CertificatesPage = () => {
         logo: MetaLogo,
       },
       url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
+    },
+    {
+      title: "IBM AI Engineering Professional Certificate",
+      issuer: {
+        name: "IBM",
+        url: "https://www.linkedin.com/company/ibm/",
+        logo: IBM_Logo,
+      },
+      url: "https://www.coursera.org/account/accomplishments/professional-cert/5R8QGKAZBE3A",
+    },
+    {
+      title: "Introduction to Marketing",
+      issuer: {
+        name: "University of Pennsylvania",
+        url: "https://online.wharton.upenn.edu/",
+        logo: Wharton_Logo,
+      },
+      url: "https://www.coursera.org/account/accomplishments/verify/C4MR3N4N4QFA",
     },
   ];
 
