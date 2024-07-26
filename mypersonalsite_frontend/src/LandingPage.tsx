@@ -3,9 +3,18 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import intro_icon from "./assets/name_icon.png";
 import portrait from "./assets/tom_zhang_portrait.webp";
+import real_portrait from "./assets/real_tom.png";
 import "./LandingPage.css";
+import { useState } from "react";
 
 const LandingPage = () => {
+
+  const [cartoon, setCartoon] = useState(false);
+
+  const switchPortrait = () => {
+    setCartoon(!cartoon);
+  }
+
   return (
     <>
       <div className="container landing-page">
@@ -49,9 +58,10 @@ const LandingPage = () => {
             <div className="col-md-4">
               <div className="image-container">
                 <img
-                  src={portrait}
+                  src={cartoon ? portrait: real_portrait}
                   alt="Tom Zhang's portrait"
-                  className="styled-image"
+                  className="portrait styled-image"
+                  onClick={switchPortrait}
                 />
               </div>
             </div>
