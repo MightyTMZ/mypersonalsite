@@ -44,7 +44,7 @@ const ProjectsPage: React.FC = () => {
         return response.json();
       })
       .then((data) => {
-        setProjects(data);
+        setProjects(data.reverse());
         setLoading(false); // Set loading to false after data is fetched
       })
       .catch((error) => {
