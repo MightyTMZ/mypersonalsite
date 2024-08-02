@@ -53,8 +53,11 @@ const NavBar = () => {
               >
                 Portfolio
               </a>
-              <a className="dropdown-item poppins-semibold" href="#/skills">
+              <a className="dropdown-item poppins-semibold" href="#/education">
                 Skills
+              </a>
+              <a className="dropdown-item poppins-semibold" href="#/skills">
+                Education
               </a>
               <a
                 className="dropdown-item poppins-semibold"
