@@ -57,8 +57,8 @@ interface CertificatesProps {
 const Certificates: React.FC<CertificatesProps> = ({ certificates }) => {
   return (
     <Fragment>
+      <NavBar />
       <div className="container">
-        <NavBar />
         <h1 className="certificates-heading poppins poppins-white">
           Certificates
         </h1>

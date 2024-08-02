@@ -9,8 +9,8 @@ const ConnectWithMe = () => {
 
   return (
     <Fragment>
+      <NavBar />
       <div className="container">
-        <NavBar />
         <div className="connect-container">
           <div className="profile-section">
             <img src={pfp} alt="Profile" className="profile-pic" />

@@ -64,8 +64,8 @@ const ProjectDetails = () => {
   if (loading) {
     return (
       <Fragment>
+        <NavBar />
         <div className="container poppins">
-          <NavBar />
           <div className="loading-container">
             <ClipLoader size={50} color={"#123abc"} loading={loading} />
             <p>Loading...</p>
@@ -78,8 +78,8 @@ const ProjectDetails = () => {
   if (!project) {
     return (
       <Fragment>
+        <NavBar />
         <div className="container poppins">
-          <NavBar />
           <h2>Project not found</h2>
         </div>
       </Fragment>

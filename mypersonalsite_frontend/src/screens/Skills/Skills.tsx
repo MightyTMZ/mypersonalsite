@@ -6,17 +6,16 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import python from "../../assets/Python.png";
 import javascript from "../../assets/JavaScript.png";
-import django from "../../assets/django.png"; 
-import tensorflow from "../../assets/tensorflow.png"; 
-import ml from "../../assets/machine leanring.png"; 
-import ds from "../../assets/data science.png"; 
-import html_css from "../../assets/html_css.svg"; 
+import django from "../../assets/django.png";
+import tensorflow from "../../assets/tensorflow.png";
+import ml from "../../assets/machine leanring.png";
+import ds from "../../assets/data science.png";
+import html_css from "../../assets/html_css.svg";
 import react from "../../assets/react.png";
 import pytorch from "../../assets/pytorch.png";
 import sql from "../../assets/sql.png";
 import git_github from "../../assets/git-vs-github.png";
 import docker from "../../assets/docker.webp";
-
 
 const Skills = () => {
   document.title = "Tom Zhang - Skills";
@@ -97,8 +96,8 @@ const Skills = () => {
 
   return (
     <Fragment>
+      <NavBar />
       <div className="skills-container container poppins">
-        <NavBar />
         <main>
           <div className="skills-grid">
             {skills.map((skill, index) => (

@@ -11,38 +11,34 @@ const NavBar = () => {
   };
 
   const goToHome = () => {
-    window.open("/");
+    window.location.href = "/";
   };
 
   return (
     <>
-      <header className="navbar-custom d-flex justify-content-between align-items-center py-3 px-4">
+      <header className="navbar-custom">
         <h1 className="navbar-brand poppins-bold name-tag" onClick={goToHome}>
           Tom Zhang
         </h1>
-        <nav className="d-flex align-items-center">
-          <a href="#home" className="nav-item poppins-semibold mx-2">
+        <nav className="nav-links">
+          <a href="#home" className="nav-item poppins-semibold">
             Home
           </a>
-          <a href="#home" className="nav-item poppins-semibold mx-2">
+          <a href="#/#about" className="nav-item poppins-semibold">
             About
           </a>
           <a
             href="mailto:tom.zhang.career@hotmail.com"
-            className="nav-item poppins-semibold mx-2"
+            className="nav-item poppins-semibold"
           >
             Contact
           </a>
           <div className="dropdown">
             <button
-              className="dropdown-toggle nav-item poppins-semibold mx-2"
+              className="dropdown-toggle nav-item poppins-semibold"
               onClick={toggleDropdown}
               aria-expanded={isDropdownOpen}
-              style={{
-                background: "none",
-                border: "none",
-                color: "#fff",
-              }}
+              style={{ color: "white" }}
             >
               Other
             </button>
@@ -53,10 +49,10 @@ const NavBar = () => {
               >
                 Portfolio
               </a>
-              <a className="dropdown-item poppins-semibold" href="#/education">
+              <a className="dropdown-item poppins-semibold" href="#/skills">
                 Skills
               </a>
-              <a className="dropdown-item poppins-semibold" href="#/skills">
+              <a className="dropdown-item poppins-semibold" href="#/education">
                 Education
               </a>
               <a
@@ -78,9 +74,7 @@ const NavBar = () => {
           </div>
         </nav>
       </header>
-      <div
-        style={{ height: "1.5px", background: "#333", borderRadius: "50%" }}
-      ></div>
+      <div className="separator"></div>
     </>
   );
 };

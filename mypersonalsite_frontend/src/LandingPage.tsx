@@ -16,9 +16,8 @@ const LandingPage = () => {
 
   return (
     <>
+      <NavBar />
       <div className="container landing-page">
-        <NavBar />
-
         {/*<header className="d-flex justify-content-between align-items-center py-3">
           <h1 className="h3">Tom Zhang</h1>
           <nav>
@@ -88,7 +87,7 @@ const LandingPage = () => {
                 <br />
                 <br />
                 If you you need to reach me in any way, please visit my
-                <a className="bio-link" href="">
+                <a className="bio-link" href="/#connect-with-me">
                   &nbsp;contacts page
                 </a>
                 .

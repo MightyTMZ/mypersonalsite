@@ -1,7 +1,7 @@
 import "./ProjectsPage.css";
 import NavBar from "../../components/NavBar/NavBar";
 import ProjectBox from "../../components/ProjectBox/ProjectBox";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 
 interface Link {
@@ -55,45 +55,49 @@ const ProjectsPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="container">
+      <Fragment>
         <NavBar />
-        <ClipLoader size={50} color={"#123abc"} loading={loading} />
-        <p>Loading projects...</p>
-      </div>
+        <div className="container">
+          <ClipLoader size={50} color={"#123abc"} loading={loading} />
+          <p>Loading projects...</p>
+        </div>
+      </Fragment>
     );
   }
 
   return (
-    <div className="container">
+    <Fragment>
       <NavBar />
-      <main>
-        <div className="container project-container">
-          <div className="row">
-            {projects
-              .filter((project) => project.visible)
-              .map((filteredProject) => (
-                <div
-                  key={filteredProject.id}
-                  className="col-12 col-md-6 col-lg-4 mb-4"
-                >
-                  <ProjectBox
-                    id={filteredProject.id}
-                    photo={
-                      filteredProject.images.length > 0
-                        ? filteredProject.images[0].image
-                        : undefined
-                    }
-                    title={filteredProject.title}
-                    description={filteredProject.description}
-                    links={filteredProject.links}
-                    views={filteredProject.views}
-                  />
-                </div>
-              ))}
+      <div className="container">
+        <main>
+          <div className="container project-container">
+            <div className="row">
+              {projects
+                .filter((project) => project.visible)
+                .map((filteredProject) => (
+                  <div
+                    key={filteredProject.id}
+                    className="col-12 col-md-6 col-lg-4 mb-4"
+                  >
+                    <ProjectBox
+                      id={filteredProject.id}
+                      photo={
+                        filteredProject.images.length > 0
+                          ? filteredProject.images[0].image
+                          : undefined
+                      }
+                      title={filteredProject.title}
+                      description={filteredProject.description}
+                      links={filteredProject.links}
+                      views={filteredProject.views}
+                    />
+                  </div>
+                ))}
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </Fragment>
   );
 };
 
