@@ -8,12 +8,11 @@ import "./LandingPage.css";
 import { useState } from "react";
 
 const LandingPage = () => {
-
   const [cartoon, setCartoon] = useState(false);
 
   const switchPortrait = () => {
     setCartoon(!cartoon);
-  }
+  };
 
   return (
     <>
@@ -58,7 +57,7 @@ const LandingPage = () => {
             <div className="col-md-4">
               <div className="image-container">
                 <img
-                  src={cartoon ? portrait: real_portrait}
+                  src={cartoon ? portrait : real_portrait}
                   alt="Tom Zhang's portrait"
                   className="portrait styled-image"
                   onClick={switchPortrait}
@@ -81,6 +80,18 @@ const LandingPage = () => {
                 engineering, web development, and global management drives my
                 interest in exploring the intersection of technology, economics,
                 and sustainable development.
+                <br />
+                <br />
+                Currently, I am working on SkyScout Baseball, a product
+                leveraging drones and AI to revolutionize team coaching and
+                tactical analysis in baseball.
+                <br />
+                <br />
+                If you you need to reach me in any way, please visit my
+                <a className="bio-link" href="">
+                  &nbsp;contacts page
+                </a>
+                .
               </p>
             </div>
           </div>
