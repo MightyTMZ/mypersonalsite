@@ -1,5 +1,5 @@
 import "./Footer.css";
-import "../../fonts/Poppins.css"
+import "../../fonts/Poppins.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -56,8 +56,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="views-counter">
-        <span>Views: {views}</span>
-        {/*Placeholder for now*/}
+        <span>Views: {views.toLocaleString()}</span>
       </div>
       <p>Copyright © 2024 Tom Zhang</p>
     </footer>
