@@ -49,9 +49,9 @@ const NavBar = () => {
               >
                 Portfolio
               </a>
-              <a className="dropdown-item poppins-semibold" href="#/skills">
+              {/* <a className="dropdown-item poppins-semibold" href="#/skills">
                 Skills
-              </a>
+              </a>*/}
               <a className="dropdown-item poppins-semibold" href="#/education">
                 Education
               </a>

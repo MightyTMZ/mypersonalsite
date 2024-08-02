@@ -4,7 +4,7 @@ import LandingPage from "./LandingPage";
 import ProjectsRoutePage from "./screens/Projects/ProjectsRoutePage";
 import ProjectDetails from "./components/ProjectDetail/ProjectDetail";
 import CertificatesPage from "./screens/Certificates/Certificates";
-import Skills from "./screens/Skills/Skills";
+// import Skills from "./screens/Skills/Skills";
 import Resume from "./screens/Resume/Resume";
 import ConnectWithMe from "./screens/Connect With Me/ConnectWithMe";
 import Education from "./screens/Education/Education";
@@ -47,7 +47,7 @@ function App() {
         <Route path="/portfolio/projects" element={<ProjectsRoutePage />} />
         <Route path="/portfolio/projects/:id" element={<ProjectDetails />} />
         <Route path="/certificates" element={<CertificatesPage />} />
-        <Route path="/skills" element={<Skills />} />
+        {/* <Route path="/skills" element={<Skills />} />  */}
         <Route path="/connect-with-me" element={<ConnectWithMe />} />
         <Route path="/education" element={<Education />} />
         <Route path="/resume" element={<Resume />} />
