@@ -3,9 +3,20 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import intro_icon from "./assets/name_icon.png";
 import portrait from "./assets/tom_zhang_portrait.webp";
-import real_portrait from "./assets/real_tom.png";
+import real_portrait from "./assets/real-Tom.png";
+import businessman from "./assets/landingpage_imgs/businessman.png";
+import connection from "./assets/landingpage_imgs/connection.png";
+import dataManagement from "./assets/landingpage_imgs/data-management.png";
+import digitalInvestment from "./assets/landingpage_imgs/digital-investment.png";
+import electricalEngineering from "./assets/landingpage_imgs/electrical-engineering.png";
+import future from "./assets/landingpage_imgs/future.png";
+import innovation from "./assets/landingpage_imgs/innovation.png";
+import iot from "./assets/landingpage_imgs/iot.png";
+import layers from "./assets/landingpage_imgs/layers.png";
+import teamwork from "./assets/landingpage_imgs/teamwork.png";
+import worldWideWeb from "./assets/landingpage_imgs/world-wide-web.png";
 import "./LandingPage.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const LandingPage = () => {
   const [cartoon, setCartoon] = useState(false);
@@ -14,6 +25,36 @@ const LandingPage = () => {
     setCartoon(!cartoon);
   };
 
+  const landingPageImages = [
+    businessman,
+    connection,
+    dataManagement,
+    digitalInvestment,
+    electricalEngineering,
+    future,
+    innovation,
+    iot,
+    layers,
+    teamwork,
+    worldWideWeb,
+  ];
+
+  const imgsLength = landingPageImages.length;
+
+  let randomImageIndex = Math.floor(imgsLength * Math.random());
+
+  const [currentLandingImageIndex, setCurrentLandingImageIndex] =
+    useState(randomImageIndex);
+
+  const secondsBetweenImages = 1;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentLandingImageIndex((prevIndex) => (prevIndex + 1) % imgsLength);
+    }, secondsBetweenImages * 1000);
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [imgsLength]);
   return (
     <>
       <NavBar />
@@ -45,7 +86,7 @@ const LandingPage = () => {
             <div className="col-lg-5">
               <div style={{ width: "100%", height: "300px" }}>
                 <img
-                  src={intro_icon}
+                  src={landingPageImages[currentLandingImageIndex]}
                   alt="my icon"
                   style={{ height: "300px" }}
                 />
