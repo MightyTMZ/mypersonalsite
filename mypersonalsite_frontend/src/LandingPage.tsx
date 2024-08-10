@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap CSS is imported
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import intro_icon from "./assets/name_icon.png";
+// import intro_icon from "./assets/name_icon.png";
 import portrait from "./assets/tom_zhang_portrait.webp";
 import real_portrait from "./assets/real-Tom.png";
 import businessman from "./assets/landingpage_imgs/businessman.png";
