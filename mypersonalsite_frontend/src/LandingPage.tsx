@@ -116,22 +116,30 @@ const LandingPage = () => {
                 <a className="bio-link" href="">
                   &nbsp;Earl Haig Secondary School
                 </a>
-                . My immense and enthusiastic passion for electrical
-                engineering, web development, and global management drives my
-                interest in exploring the intersection of technology, economics,
-                and sustainable development.
-                <br />
-                <br />
-                Currently, I am working on SkyScout Baseball, a product
-                leveraging drones and AI to revolutionize team coaching and
-                tactical analysis in baseball.
-                <br />
-                <br />
-                If you you need to reach me in any way, please visit my
-                <a className="bio-link" href="/#connect-with-me">
-                  &nbsp;contacts page
-                </a>
                 .
+                <br />
+                <br />
+                🚀 Tech Innovator | IoT & AI Enthusiast | Entrepreneur <br />
+                📚 Passionate About Learning | Business & Economics Visionary{" "}
+                <br />
+                📈 Transforming Ideas Into Impactful Solutions
+                <br />
+                <br />
+                Driven by my relentless passion for technology, I am dedicated
+                to building the next big thing in IoT and tech. As a lifelong
+                learner, I continuously expand my skill and knowledge in AI,
+                business, and economics to stay at the forefront of innovation
+                in the fast-paced world. My mission is to turn bold ideas into
+                reality, creating solutions that push boundaries that break
+                boundaries and make a lasting impact. Together, we can shape the
+                future!
+                <br />
+                <br />
+                Please do not hesitate to connect with me
+                <a className="bio-link" href="/#connect-with-me">
+                  &nbsp;here
+                </a>
+                ! I am keen to meeting 
               </p>
             </div>
           </div>
