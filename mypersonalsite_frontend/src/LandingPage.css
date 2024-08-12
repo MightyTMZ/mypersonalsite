@@ -19,18 +19,28 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.prof-line {
+  color: white;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
 body {
   background: linear-gradient(
     -54deg,
-    #0077b6,
-    #008080,
-    #00b894,
-    #216097,
-    #6c8db6,
-    #405db5
+    #3a6073,  /* Deep teal */
+    #5a879d,  /* Cool gray-blue */
+    #72a1b7,  /* Soft blue */
+    #6e8e8e,  /* Muted teal */
+    #9ba8a9,  /* Soft gray */
+    #4b6878   /* Deep blue-gray */
   );
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
+}
+
+.profession {
+  text-decoration: underline;
 }
 
 .landing-page {
@@ -50,6 +60,8 @@ body {
 #name-intro {
   font-size: 3rem;
   color: white;
+  text-align: left;
+  margin-bottom: 3rem;
 }
 
 #about {
@@ -123,4 +135,8 @@ body {
 .introduction p {
   text-align: center; /* Centering text in the introduction */
   margin-top: 20px;
+}
+
+.substack-heading {
+  color: white;
 }

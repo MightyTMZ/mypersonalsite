@@ -1,7 +1,6 @@
-import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap CSS is imported
+import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-// import intro_icon from "./assets/name_icon.png";
 import portrait from "./assets/tom_zhang_portrait.webp";
 import real_portrait from "./assets/real-Tom.png";
 import businessman from "./assets/landingpage_imgs/businessman.png";
@@ -15,8 +14,10 @@ import iot from "./assets/landingpage_imgs/iot.png";
 import layers from "./assets/landingpage_imgs/layers.png";
 import teamwork from "./assets/landingpage_imgs/teamwork.png";
 import worldWideWeb from "./assets/landingpage_imgs/world-wide-web.png";
+import SubstackFeed from "./components/SubstackFeed";
 import "./LandingPage.css";
 import { useState, useEffect } from "react";
+import { ReactTyped } from "react-typed";
 
 const LandingPage = () => {
   const [cartoon, setCartoon] = useState(false);
@@ -59,29 +60,32 @@ const LandingPage = () => {
     <>
       <NavBar />
       <div className="container landing-page">
-        {/*<header className="d-flex justify-content-between align-items-center py-3">
-          <h1 className="h3">Tom Zhang</h1>
-          <nav>
-            <a href="#home" className="btn btn-link">
-              Home
-            </a>
-            <a href="#about" className="btn btn-link">
-              About
-            </a>
-            <a href="#projects" className="btn btn-link">
-              Projects
-            </a>
-            <a href="#other" className="btn btn-link">
-              Other
-            </a>
-          </nav>
-        </header>*/}
         <main>
           <div className="row align-items-center my-5">
             <div className="col-lg-7 text-center text-lg-left">
-              <h2 className="poppins-bold" id="name-intro">
-                Hey! I’m Tom Zhang
-              </h2>
+              <h1 className="poppins-bold" id="name-intro">
+                Hello! I’m Tom Zhang
+              </h1>
+              <p className="poppins prof-line">
+                I am{" "}
+                <ReactTyped
+                  className="poppins-bold profession"
+                  strings={[
+                    "an innovator",
+                    "a data-driven decision maker",
+                    "a leader",
+                    "an engineer",
+                    "an entrepreneur",
+                    "a technologist",
+                    "a team player",
+                    "a global thinker",
+                    "a visionary",
+                  ]}
+                  typeSpeed={50}
+                  backSpeed={30}
+                  loop
+                />
+              </p>
             </div>
             <div className="col-lg-5">
               <div style={{ width: "100%", height: "300px" }}>
@@ -105,12 +109,12 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="col-md-8" id="about">
-              <h2
+              <h1
                 className="poppins-light"
                 style={{ fontSize: "3rem", marginBottom: "2rem" }}
               >
                 LET ME INTRODUCE MYSELF
-              </h2>
+              </h1>
               <p className="poppins-regular bio-para">
                 Hi! My name is Tom Zhang, and I am currently a student at
                 <a className="bio-link" href="">
@@ -139,9 +143,13 @@ const LandingPage = () => {
                 <a className="bio-link" href="/#connect-with-me">
                   &nbsp;here
                 </a>
-                ! I am keen to meeting 
+                ! Please feel free to reach out—I'm always eager to meet new
+                people and be open-minded about exciting new ventures.
               </p>
             </div>
+            <h1 className="poppins mb-4 substack-heading">Latest From Me</h1>
+            <SubstackFeed/>
+            
           </div>
         </main>
       </div>

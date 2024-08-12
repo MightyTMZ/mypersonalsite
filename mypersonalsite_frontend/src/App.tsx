@@ -10,28 +10,6 @@ import ConnectWithMe from "./screens/Connect With Me/ConnectWithMe";
 import Education from "./screens/Education/Education";
 
 function App() {
-  {
-    /*let certs = [
-    {
-      title: "Meta Back-End Developer Professional Certificate",
-      issuer: {
-        name: "Meta",
-        url: "https://www.linkedin.com/company/meta/",
-        logo: logo, // Assign the imported logo here directly
-      },
-      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
-    },
-    {
-      title: "IBM AI Engineering Professional Certificate",
-      issuer: {
-        name: "IBM",
-        url: "https://www.linkedin.com/company/ibm/",
-        logo: logo2, // Assign the imported logo here directly
-      },
-      url: "https://www.coursera.org/account/accomplishments/specialization/L54BNPRXXHHR",
-    },
-  ]; */
-  }
 
   return (
     <Router>

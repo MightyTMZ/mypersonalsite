@@ -2,7 +2,7 @@ import "./ConnectWithMe.css";
 import "../../fonts/Poppins.css";
 import { Fragment } from "react/jsx-runtime";
 import NavBar from "../../components/NavBar/NavBar";
-import pfp from "../../assets/tom_zhang_portrait.webp";
+import pfp from "../../assets/real-Tom.png";
 
 const ConnectWithMe = () => {
   document.title = "Tom Zhang - Connect with me";
@@ -45,7 +45,14 @@ const ConnectWithMe = () => {
               className="connect-link substack"
               target="blank"
             >
-              Personal Newsletter
+              Substack
+            </a>
+            <a
+              href="https://www.instagram.com/tomzhang_official/"
+              className="connect-link instagram"
+              target="blank"
+            >
+              Instagram
             </a>
             {/* Embed LinkedIn activity? */}
           </div>
