@@ -1,6 +1,7 @@
 import NavBar from "../../components/NavBar/NavBar";
 // import Footer from '../../components/Footer/Footer';
 import resume from "./resume.pdf";
+import latex_resume from "./tom_resume.pdf"
 import "./Resume.css";
 import { Fragment } from "react/jsx-runtime";
 
@@ -11,6 +12,7 @@ const Resume = () => {
     <Fragment>
       <NavBar />
       <div className="container">
+        <iframe id="resume" src={latex_resume} height="500px" width="100%"></iframe>
         <iframe id="resume" src={resume} height="500px" width="100%"></iframe>
       </div>
     </Fragment>
