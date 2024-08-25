@@ -22,7 +22,7 @@ const Education = () => {
       description: "Entrepreneurship & Entrepreneurial Studies",
       logo: UWaterloo,
     },
-    {
+    {/* {
       name: "The World Bank Open Learning Campus",
       start_date: "July 2024",
       end_date: "October 2024",
@@ -93,7 +93,7 @@ const Education = () => {
         - Consumer Price Index
         `,
       logo: IMF,
-    },
+    }, */}
   ];
 
   return (
