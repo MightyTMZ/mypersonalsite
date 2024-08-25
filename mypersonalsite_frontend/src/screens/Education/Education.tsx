@@ -2,9 +2,10 @@ import "./Education.css";
 import NavBar from "../../components/NavBar/NavBar";
 import EHSS from "../../assets/EHSS.png";
 import UWaterloo from "../../assets/UWaterloo.webp";
-import WB from "../../assets/TheWorldBank.png";
-import IMF from "../../assets/InternationalMonetaryFund.png";
-import ADB from "../../assets/AsianDevelopmentBank.png";
+// import WB from "../../assets/TheWorldBank.png";
+// import IMF from "../../assets/InternationalMonetaryFund.png";
+// import ADB from "../../assets/AsianDevelopmentBank.png";  
+// I have not formally completed these, so I cannot put it on my resume yet 😭
 
 const Education = () => {
   const education = [
