@@ -17,26 +17,27 @@ const ConnectWithMe = () => {
           </div>
           <div className="links-section poppins">
             <a
+              href="https://x.com/OrbitTommyZ"
+              className="connect-link twitter"
+              target="blank"
+            >
+              Twitter: @OrbitTommyZ
+            </a>
+            <a
               href="https://www.linkedin.com/in/tom-zhang-485341274/"
               className="connect-link linkedin"
               target="blank"
             >
-              LinkedIn
+              LinkedIn: Tom Zhang
             </a>
             <a
               href="https://github.com/MightyTMZ"
               className="connect-link github"
               target="blank"
             >
-              GitHub
+              GitHub: @MightyTMZ
             </a>
-            <a
-              href="https://x.com/tom_zhang20"
-              className="connect-link twitter"
-              target="blank"
-            >
-              Twitter
-            </a>
+
             {/*<a href="mailto:your.email@example.com" className="connect-link">
               Email Me
             </a> */}
@@ -45,14 +46,14 @@ const ConnectWithMe = () => {
               className="connect-link substack"
               target="blank"
             >
-              Substack
+              Substack: Tom's Digest
             </a>
             <a
-              href="https://www.instagram.com/tomzhang_official/"
+              href="https://www.instagram.com/tom.zhang20/"
               className="connect-link instagram"
               target="blank"
             >
-              Instagram
+              Instagram: @tom.zhang20
             </a>
             {/* Embed LinkedIn activity? */}
           </div>

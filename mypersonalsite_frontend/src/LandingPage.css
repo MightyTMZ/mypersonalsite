@@ -25,15 +25,20 @@
   font-size: 1.5rem;
 }
 
+.quote-heading {
+  color: white;
+  margin-bottom: 30px;
+}
+
 body {
   background: linear-gradient(
     -54deg,
-    #3a6073,  /* Deep teal */
-    #5a879d,  /* Cool gray-blue */
-    #72a1b7,  /* Soft blue */
-    #6e8e8e,  /* Muted teal */
-    #9ba8a9,  /* Soft gray */
-    #4b6878   /* Deep blue-gray */
+    #3a6073,
+    /* Deep teal */ #5a879d,
+    /* Cool gray-blue */ #72a1b7,
+    /* Soft blue */ #6e8e8e,
+    /* Muted teal */ #9ba8a9,
+    /* Soft gray */ #4b6878 /* Deep blue-gray */
   );
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;

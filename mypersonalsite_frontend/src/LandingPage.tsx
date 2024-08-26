@@ -15,6 +15,7 @@ import layers from "./assets/landingpage_imgs/layers.png";
 import teamwork from "./assets/landingpage_imgs/teamwork.png";
 import worldWideWeb from "./assets/landingpage_imgs/world-wide-web.png";
 import SubstackFeed from "./components/SubstackFeed";
+import Quotes from "./screens/Quotes/Quotes";
 import "./LandingPage.css";
 import { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
@@ -110,7 +111,7 @@ const LandingPage = () => {
             </div>
             <div className="col-md-8" id="about">
               <h1
-                className="poppins-light"
+                className="poppins-bold"
                 style={{ fontSize: "3rem", marginBottom: "2rem" }}
               >
                 LET ME INTRODUCE MYSELF
@@ -146,10 +147,11 @@ const LandingPage = () => {
                 ! Please feel free to reach out—I'm always eager to meet new
                 people and be open-minded about exciting new ventures.
               </p>
-            </div>
+            </div>{" "}
+            <h1 className="poppins mb-2 quote-heading">Quote of the...</h1>
+            <Quotes />
             <h1 className="poppins mb-4 substack-heading">Latest From Me</h1>
-            <SubstackFeed/>
-            
+            <SubstackFeed />
           </div>
         </main>
       </div>

@@ -44,6 +44,12 @@ const NavBar = () => {
             </button>
             <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
               <a
+                className="dropdown-item poppins-semibold last-item"
+                href="#/connect-with-me"
+              >
+                Connect with me!
+              </a>
+              <a
                 className="dropdown-item poppins-semibold"
                 href="#/portfolio/projects"
               >
@@ -63,12 +69,6 @@ const NavBar = () => {
               </a>
               <a className="dropdown-item poppins-semibold" href="#/resume">
                 My Resume
-              </a>
-              <a
-                className="dropdown-item poppins-semibold last-item"
-                href="#/connect-with-me"
-              >
-                Connect with me!
               </a>
             </div>
           </div>
