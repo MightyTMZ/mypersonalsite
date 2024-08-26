@@ -91,7 +91,7 @@ const Quotes = () => {
         <h3>HOUR</h3>
 
         <div dangerouslySetInnerHTML={{ __html: quoteOfHour.content }} />
-        <p className="quote-context">— {quoteOfHour.context}</p>
+        <p className="quote-context">— {quoteOfHour.context}</p>foote
       </div>
 
       {/* Quote of the Day */}

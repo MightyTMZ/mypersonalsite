@@ -31,7 +31,7 @@ const Footer = () => {
     <footer className="footer poppins">
       <div className="social-media">
         <a
-          href="https://x.com/tom_zhang20"
+          href="https://x.com/OrbitTommyZ"
           aria-label="Twitter"
           target="_blank"
           rel="noopener noreferrer"
