@@ -12,10 +12,10 @@
 
 .quote-section {
   padding: 20px;
-  background-color: #D3D3D3;
+  background-color: #f4f4f4;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s ease;
-  border: 1px solid white
+  border: 1px solid grey;
 }
 
 .first {

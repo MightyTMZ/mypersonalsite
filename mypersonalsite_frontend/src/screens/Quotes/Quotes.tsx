@@ -2,11 +2,20 @@ import { useEffect, useState } from "react";
 import "./Quotes.css";
 
 const Quotes = () => {
-  const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
-  const [quotes, setQuotes] = useState([]);
+  const emptyQuote = {
+    content: "Content",
+    context: "Context",
+  };
 
+  const backendServerAdress = "https://tomzhangpersonalsite.pythonanywhere.com";
+  const [quoteOfHour, setQuoteOfHour] = useState(emptyQuote);
+  const [quoteOfDay, setQuoteOfDay] = useState(emptyQuote);
+  const [quoteOfWeek, setQuoteOfWeek] = useState(emptyQuote);
+  const [quoteOfMonth, setQuoteOfMonth] = useState(emptyQuote);
+
+  // Fetch quote of the hour
   useEffect(() => {
-    fetch(`${backendServerAdress}/my-vision/quote-random`)
+    fetch(`${backendServerAdress}/my-vision/quote-hour/`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -14,78 +23,107 @@ const Quotes = () => {
         return response.json();
       })
       .then((data) => {
-        setQuotes(data.count);
+        setQuoteOfHour(data);
       })
       .catch((error) => {
         console.error("Error fetching views:", error);
       });
   }, []);
-  console.log(quotes);
 
-  const quotes1 = {
-    hour: {
-      content: "<p>Stay hungry. Stay foolish.</p>",
-      context: "Steve Jobs",
-    },
-    day: {
-      content:
-        "<p>Success is not final, failure is not fatal: It is the courage to continue that counts.</p>",
-      context: "Winston Churchill",
-    },
-    week: {
-      content: "<p>The only way to do great work is to love what you do.</p>",
-      context: "Steve Jobs",
-    },
-    month: {
-      content: "<p>Don’t watch the clock; do what it does. Keep going.</p>",
-      context: "Sam Levenson",
-    },
-    year: {
-      content: "<p>Act as if what you do makes a difference. It does.</p>",
-      context: "William James",
-    },
-  };
+  // Fetch quote of the day
+  useEffect(() => {
+    fetch(`${backendServerAdress}/my-vision/quote-day/`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setQuoteOfDay(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching views:", error);
+      });
+  }, []);
+
+  // Fetch quote of the week
+  useEffect(() => {
+    fetch(`${backendServerAdress}/my-vision/quote-week/`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setQuoteOfWeek(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching views:", error);
+      });
+  }, []);
+
+  // Fetch quote of the month
+  useEffect(() => {
+    fetch(`${backendServerAdress}/my-vision/quote-month/`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setQuoteOfMonth(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching views:", error);
+      });
+  }, []);
+
+  const quoteOfYearContent = `<p>"The people who are crazy enough to think they can change the world are the ones who do."</p>`;
+  const quoteOfYearContext = "Steve Jobs, Think Different (Apple)";
 
   return (
     <div className="quotes-widget poppins">
       {/* Quote of the Hour */}
       <div className="quote-section poppins first">
-        <h3>Hour</h3>
-        <hr style={{color: 'black'}} />
-        <div dangerouslySetInnerHTML={{ __html: quotes1.hour.content }} />
-        <p className="quote-context">— {quotes1.hour.context}</p>
+        <h3>HOUR</h3>
+
+        <div dangerouslySetInnerHTML={{ __html: quoteOfHour.content }} />
+        <p className="quote-context">— {quoteOfHour.context}</p>
       </div>
 
       {/* Quote of the Day */}
       <div className="quote-section poppins">
-        <h3>Day</h3>
-        <hr style={{color: 'black'}} />
-        <div dangerouslySetInnerHTML={{ __html: quotes1.day.content }} />
-        <p className="quote-context">— {quotes1.day.context}</p>
+        <h3>DAY</h3>
+
+        <div dangerouslySetInnerHTML={{ __html: quoteOfDay.content }} />
+        <p className="quote-context">— {quoteOfDay.context}</p>
       </div>
 
       {/* Quote of the Week */}
       <div className="quote-section poppins">
-        <h3>Week</h3>
-        <hr style={{color: 'black'}} />
-        <div dangerouslySetInnerHTML={{ __html: quotes1.week.content }} />
-        <p className="quote-context">— {quotes1.week.context}</p>
+        <h3>WEEK</h3>
+
+        <div dangerouslySetInnerHTML={{ __html: quoteOfWeek.content }} />
+        <p className="quote-context">— {quoteOfWeek.context}</p>
       </div>
 
       {/* Quote of the Month */}
       <div className="quote-section poppins">
-        <h3>Month</h3>
-        <hr style={{color: 'black'}} />
-        <div dangerouslySetInnerHTML={{ __html: quotes1.month.content }} />
-        <p className="quote-context">— {quotes1.month.context}</p>
+        <h3>MONTH</h3>
+
+        <div dangerouslySetInnerHTML={{ __html: quoteOfMonth.content }} />
+        <p className="quote-context">— {quoteOfMonth.context}</p>
       </div>
 
       {/* Quote of the Year */}
       <div className="quote-section poppins last">
-        <h3>Year</h3>
-        <hr style={{color: 'black'}} />
-        <div dangerouslySetInnerHTML={{ __html: quotes1.year.content }} />
-        <p className="quote-context">— {quotes1.year.context}</p>
+        <h3>YEAR</h3>
+
+        <div dangerouslySetInnerHTML={{ __html: quoteOfYearContent }} />
+        <p className="quote-context">— {quoteOfYearContext}</p>
       </div>
     </div>
   );

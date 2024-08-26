@@ -16,6 +16,7 @@ import teamwork from "./assets/landingpage_imgs/teamwork.png";
 import worldWideWeb from "./assets/landingpage_imgs/world-wide-web.png";
 import SubstackFeed from "./components/SubstackFeed";
 import Quotes from "./screens/Quotes/Quotes";
+import Communities from "./components/MyCommunities/MyCommunities";
 import "./LandingPage.css";
 import { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
@@ -57,6 +58,24 @@ const LandingPage = () => {
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [imgsLength]);
+
+  const d = new Date();
+  // const localDateForUser = d.toLocaleDateString();
+  // const localTimeForUser = d.toLocaleTimeString();
+  // console.log(localDateForUser);
+  // console.log(localTimeForUser);
+
+  let greetingMessage = "";
+  const hours = d.getHours();
+
+  if (hours < 12) {
+    greetingMessage = "Good morning!";
+  } else if (hours < 18) {
+    greetingMessage = "Good afternoon!";
+  } else {
+    greetingMessage = "Good evening!";
+  }
+
   return (
     <>
       <NavBar />
@@ -64,8 +83,8 @@ const LandingPage = () => {
         <main>
           <div className="row align-items-center my-5">
             <div className="col-lg-7 text-center text-lg-left">
-              <h1 className="poppins-bold" id="name-intro">
-                Hello! I’m Tom Zhang
+              <h1 className="poppins" id="name-intro">
+                {greetingMessage} My name is Tom Zhang
               </h1>
               <p className="poppins prof-line">
                 I am{" "}
@@ -117,11 +136,10 @@ const LandingPage = () => {
                 LET ME INTRODUCE MYSELF
               </h1>
               <p className="poppins-regular bio-para">
-                Hi! My name is Tom Zhang, and I am currently a student at
+                Hi! My name is Tom Zhang, and I am currently based in
                 <a className="bio-link" href="">
-                  &nbsp;Earl Haig Secondary School
+                  &nbsp;Toronto, Canada 🍁
                 </a>
-                .
                 <br />
                 <br />
                 🚀 Tech Innovator | IoT & AI Enthusiast | Entrepreneur <br />
@@ -130,14 +148,13 @@ const LandingPage = () => {
                 📈 Transforming Ideas Into Impactful Solutions
                 <br />
                 <br />
-                Driven by my relentless passion for technology, I am dedicated
-                to building the next big thing in IoT and tech. As a lifelong
-                learner, I continuously expand my skill and knowledge in AI,
-                business, and economics to stay at the forefront of innovation
-                in the fast-paced world. My mission is to turn bold ideas into
-                reality, creating solutions that push boundaries that break
-                boundaries and make a lasting impact. Together, we can shape the
-                future!
+                <ReactTyped
+                  className="poppins"
+                  strings={[
+                    "Driven by my relentless passion for technology, I am dedicated to building the next big thing in IoT and tech. As a lifelong learner, I continuously expand my skill and knowledge in artificial, business, and economics to stay at the forefront of innovation in the fast-paced world. My mission is to turn bold ideas into reality, creating solutions that push boundaries that break boundaries and make a lasting impact. Together, we can shape the future!",
+                  ]}
+                  typeSpeed={10}
+                />
                 <br />
                 <br />
                 Please do not hesitate to connect with me
@@ -148,6 +165,7 @@ const LandingPage = () => {
                 people and be open-minded about exciting new ventures.
               </p>
             </div>{" "}
+            <Communities />
             <h1 className="poppins mb-2 quote-heading">Quote of the...</h1>
             <Quotes />
             <h1 className="poppins mb-4 substack-heading">Latest From Me</h1>
