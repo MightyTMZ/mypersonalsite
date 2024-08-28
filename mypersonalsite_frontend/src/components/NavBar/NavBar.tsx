@@ -58,9 +58,9 @@ const NavBar = () => {
               {/* <a className="dropdown-item poppins-semibold" href="#/skills">
                 Skills
               </a>*/}
-              <a className="dropdown-item poppins-semibold" href="#/education">
+              {/*<a className="dropdown-item poppins-semibold" href="#/education">
                 Education
-              </a>
+              </a>*/}
               <a
                 className="dropdown-item poppins-semibold"
                 href="#/certificates"
