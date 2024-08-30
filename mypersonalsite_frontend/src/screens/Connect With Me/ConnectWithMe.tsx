@@ -17,7 +17,7 @@ const ConnectWithMe = () => {
           </div>
           <div className="links-section poppins">
             <a
-              href="https://x.com/OrbitTommyZ"
+              href="https://calendly.com/tom-zhang-career"
               className="connect-link calendly"
               target="blank"
             >
