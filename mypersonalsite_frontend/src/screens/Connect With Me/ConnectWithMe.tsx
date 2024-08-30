@@ -18,6 +18,13 @@ const ConnectWithMe = () => {
           <div className="links-section poppins">
             <a
               href="https://x.com/OrbitTommyZ"
+              className="connect-link calendly"
+              target="blank"
+            >
+              Calendly: Book a chat with me!
+            </a>
+            <a
+              href="https://x.com/OrbitTommyZ"
               className="connect-link twitter"
               target="blank"
             >

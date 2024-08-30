@@ -78,6 +78,10 @@
   color: #0077B5;
   border-color: #0077B5;
 }
+.calendly {
+  color: #006bff;
+  border-color: #006bff;
+}
 
 .substack {
   color: #ee7835;
@@ -93,6 +97,14 @@
   background: linear-gradient(45deg, #1da1f2, white);
   color: black;
   border-color: #1da1f2;
+  transform: scale(
+    1.05
+  ); 
+}
+.calendly:hover {
+  background: linear-gradient(45deg, #006bff, white);
+  color: white;
+  border-color: #006bff;
   transform: scale(
     1.05
   ); 
