@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "../../fonts/Poppins.css";
 import "./QuotesScroller.css";
-// import { FaPlayCircle, FaPauseCircle } from "react-icons/fa"; // Combine import statements
 
 interface Quote {
   id: number;
@@ -12,9 +11,17 @@ interface Quote {
 function QuotesScroller() {
   const [index, setIndex] = useState(0);
   const [live, setLive] = useState(true);
-  const [quotes, setQuotes] = useState<Quote[]>([]); // Initialize quotes as an empty array
-  const backendServerAddress =
-    "https://tomzhangpersonalsite.pythonanywhere.com";
+  const [quotes, setQuotes] = useState<Quote[]>([]);
+  const backendServerAddress = "https://tomzhangpersonalsite.pythonanywhere.com";
+
+  // Function to shuffle quotes
+  function shuffleQuotes(array: Quote[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+      [array[i], array[j]] = [array[j], array[i]]; // swap elements
+    }
+    return array;
+  }
 
   useEffect(() => {
     fetch(`${backendServerAddress}/my-vision/all-quotes/`)
@@ -25,7 +32,8 @@ function QuotesScroller() {
         return response.json();
       })
       .then((data) => {
-        setQuotes(data);
+        const shuffledQuotes = shuffleQuotes(data); // Shuffle the quotes after fetching
+        setQuotes(shuffledQuotes);
       })
       .catch((error) => {
         console.error("Error fetching quotes:", error);
@@ -61,7 +69,6 @@ function QuotesScroller() {
           <p>Tap to {live ? "pause" : "play"}</p>
         </div>
       </div>
-  
     </>
   );
 }
