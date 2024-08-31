@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../../fonts/Poppins.css";
 import "./QuotesScroller.css";
-import { FaPlayCircle, FaPauseCircle } from "react-icons/fa"; // Combine import statements
+// import { FaPlayCircle, FaPauseCircle } from "react-icons/fa"; // Combine import statements
 
 interface Quote {
   id: number;
