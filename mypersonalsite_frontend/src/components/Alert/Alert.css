@@ -1,0 +1,9 @@
+.close {
+    float: right;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    background-color: firebrick;
+}

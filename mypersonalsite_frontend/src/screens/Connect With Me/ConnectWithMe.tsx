@@ -55,14 +55,14 @@ const ConnectWithMe = () => {
             >
               Substack: Tom's Digest
             </a>
-            <a
+             {/* <a
               href="https://www.instagram.com/tom.zhang20/"
               className="connect-link instagram"
               target="blank"
             >
               Instagram: @tom.zhang20
             </a>
-            {/* Embed LinkedIn activity? */}
+           Embed LinkedIn activity? */}
           </div>
         </div>
       </div>

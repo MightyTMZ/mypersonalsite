@@ -17,6 +17,8 @@ import worldWideWeb from "./assets/landingpage_imgs/world-wide-web.png";
 import SubstackFeed from "./components/SubstackFeed";
 import Quotes from "./screens/Quotes/Quotes";
 import Communities from "./components/MyCommunities/MyCommunities";
+import Alert from "./components/Alert/Alert";
+import QuotesScroller from "./components/QuotesScroller/QuotesScroller";
 import "./LandingPage.css";
 import { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
@@ -79,6 +81,7 @@ const LandingPage = () => {
   return (
     <>
       <NavBar />
+      <Alert/>
       <div className="container landing-page">
         <main>
           <div className="row align-items-center my-5">
@@ -166,6 +169,7 @@ const LandingPage = () => {
               </p>
             </div>{" "}
             <Communities />
+            <QuotesScroller/>
             <h1 className="poppins mb-2 quote-heading">Quote of the...</h1>
             <Quotes />
             <h1 className="poppins mb-4 substack-heading">Latest From Me</h1>
