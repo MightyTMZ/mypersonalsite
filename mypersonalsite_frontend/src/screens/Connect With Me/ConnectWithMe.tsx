@@ -37,6 +37,7 @@ const ConnectWithMe = () => {
             >
               LinkedIn: Tom Zhang
             </a>
+
             <a
               href="https://github.com/MightyTMZ"
               className="connect-link github"
@@ -49,13 +50,20 @@ const ConnectWithMe = () => {
               Email Me
             </a> */}
             <a
+              href="https://medium.com/@tom.zhang.career"
+              className="connect-link medium"
+              target="blank"
+            >
+              Medium: Tom's Digest
+            </a>
+            <a
               href="https://zhangtommy.substack.com/"
               className="connect-link substack"
               target="blank"
             >
               Substack: Tom's Digest
             </a>
-             {/* <a
+            {/* <a
               href="https://www.instagram.com/tom.zhang20/"
               className="connect-link instagram"
               target="blank"

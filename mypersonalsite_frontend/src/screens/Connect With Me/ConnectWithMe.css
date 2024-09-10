@@ -59,8 +59,13 @@
   border-color: #f09433;
 }
 
-.instagram:hover {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+.medium {
+  color: #000;
+  border-color: #000;
+}
+
+.medium:hover {
+  background: black;
   color: white;
   border-color: white;
   transform: scale(
@@ -120,9 +125,9 @@
 }
 
 .substack:hover {
-  background: linear-gradient(45deg, #ee7835, white);
-  color: black;
-  border-color: #ee7835;
+  background: #ee7835;/*linear-gradient(45deg, #ee7835, white); */
+  color: white /*black*/;
+  border-color: white /*#ee7835*/;
   transform: scale(
     1.05
   ); 
