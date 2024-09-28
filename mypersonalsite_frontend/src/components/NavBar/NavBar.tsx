@@ -24,11 +24,11 @@ const NavBar = () => {
           <a href="#home" className="nav-item poppins-semibold">
             Home
           </a>
-          <a href="#/#about" className="nav-item poppins-semibold">
+          <a href="#/connect-with-me" className="nav-item poppins-semibold">
             About
           </a>
           <a
-            href="mailto:tom.zhang.career@hotmail.com"
+            href="/#/connect-with-me"
             className="nav-item poppins-semibold"
           >
             Contact
