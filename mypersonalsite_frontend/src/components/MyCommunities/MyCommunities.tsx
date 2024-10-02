@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import OrbitView_Media from "../../assets/OrbitView_Media.png";
 import StandWithCrypto from "../../assets/stand_with_crypto.webp";
-import HackathonsCanada from "../../assets/hackathons_canada.jpg";
-import OmniwaveNexus from "../../assets/omniwave_nexus_logo.jpg";
+import TokenZLabs from "../../assets/d98zT8GD_400x400.jpg";
+import IBM_Skills_Network from "../../assets/342044989_533754578930833_3379502332613601_n.jpg";
 import UniversityOfWaterloo from "../../assets/UWaterloo.webp";
 import EHSS from "../../assets/EHSS.png";
 import TomDigest from "../../assets/tz-digests.png";
@@ -12,11 +12,25 @@ import "../../fonts/Poppins.css";
 const Communities = () => {
   const communities = [
     {
-      name: "OrbitView Media",
-      description:
-        "OrbitView Media is a media entity focused on technology, economics, career development, post-secondary pathways, etc. We host events and aim to collaborate with influencers and organizations to make our impact.",
+      name: "OrbitView",
+      description: `Where Innovation Connects. Immerse, Network, and Build the Future in a World of Endless Possibilities.
+Pushing the bounds by building an ultra-immersive 3D professional networking platform, autonomous AI networking for you, and a content hub that transforms knowledge absorption into an experience rather than a chore.`,
       image: OrbitView_Media,
       link: "https://www.linkedin.com/company/orbitview-media/",
+    },
+    {
+      name: "Token Z Labs",
+      description:
+        "Token Z Labs is the world’s 1st on-chain platform for luxury real estate, catering to global investors. Our platform offers a unique experience of buying/ selling luxury properties. No intermediaries or hefty broker fees! 🚀Unified, User-Centric, Universal Ledger for Capital Markets | RWA | Mint, Manage, Trade real-world-assets globally.🌎",
+      image: TokenZLabs,
+      link: "https://www.linkedin.com/company/tokenzlabs/",
+    },
+    {
+      name: "IBM Skills Network",
+      description:
+        "Creating technical courses, guided projects, and more. Proud and honored to contribute to the process of building this knowledgebase to help build amazing courses and guided projects with Skill's Network Author Workbench provided by IBM.",
+      image: IBM_Skills_Network,
+      link: "https://skills.network/",
     },
     {
       name: "Stand With Crypto",
@@ -25,27 +39,27 @@ const Communities = () => {
       image: StandWithCrypto,
       link: "https://www.ca.standwithcrypto.org/",
     },
-    {
+    /*{
       name: "Hackathons Canada Organizing Team",
       description:
         "The best database for hackathons. Browse through to find a complete list of hackathons taking place in Canada and North America",
       image: HackathonsCanada,
       link: "https://www.linkedin.com/company/hackathonscanada/",
-    },
-    {
+    },*/
+    /*{
       name: "Omniwave Nexus",
       description:
         "Omniwave Nexus is a revolutionary public speaking tool. It sits at the convergence of IoT, web development, AI, blockchain, and professional brilliance",
       image: OmniwaveNexus,
       link: "https://www.linkedin.com/company/omniwave-nexus/",
-    },
+    },*/
     {
-        name: "Tom's Digest",
-        description:
-          "Passionate about technology, business, and sustainable development. Come on board to embark on my journey of insights, ideas, and progress!",
-        image: TomDigest,
-        link: "https://zhangtommy.substack.com/",
-      },
+      name: "Tom Zhang's Digest",
+      description:
+        "Passionate about technology, business, and sustainable development. Come on board to embark on my journey of insights, ideas, and progress!",
+      image: TomDigest,
+      link: "https://zhangtommy.substack.com/",
+    },
 
     {
       name: "Earl Haig Secondary School",
